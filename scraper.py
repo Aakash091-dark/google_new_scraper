@@ -202,7 +202,14 @@ def main(total_results_needed: int, domain: str):
                 "description": None,
                 "date_published": None,
                 "source": None,
+                "url": None,
             }
+
+            # Extract URL from the document - prioritize actual web URLs
+            if "link" in data:
+                meta["url"] = data["link"]
+            elif "url" in data:
+                meta["url"] = data["url"]
 
             if "pagemap" in data:
                 pagemap = data["pagemap"]
@@ -244,6 +251,15 @@ def main(total_results_needed: int, domain: str):
                         }
                     )
 
+                    # Try to get URL from metatags - prioritize actual web URLs
+                    if not meta["url"]:
+                        meta["url"] = (
+                            tags.get("og:url")
+                            or tags.get("canonical")
+                            or tags.get("twitter:url")
+                            or tags.get("url")
+                        )
+
                     if not meta["source"] and tags.get("og:url"):
                         try:
                             meta["source"] = urlparse(tags["og:url"]).netloc
@@ -264,6 +280,16 @@ def main(total_results_needed: int, domain: str):
                             elif not meta["date_published"] and item.get("dateCreated"):
                                 meta["date_published"] = item["dateCreated"]
 
+                            # Try to get URL from JSON-LD - prioritize actual web URLs
+                            if not meta["url"] and item.get("url"):
+                                meta["url"] = item["url"]
+                            elif (
+                                not meta["url"]
+                                and item.get("@id")
+                                and item.get("@id").startswith("http")
+                            ):
+                                meta["url"] = item["@id"]
+
                 # Check in the main document data for additional date fields
                 if not meta["date_published"]:
                     main_data_date_fields = [
@@ -277,6 +303,27 @@ def main(total_results_needed: int, domain: str):
                         if data.get(field):
                             meta["date_published"] = data[field]
                             break
+
+            # Final fallback for URL extraction from various data sources
+            if not meta["url"]:
+                url_fields = ["link", "url", "href", "webpage"]
+                for field in url_fields:
+                    if (
+                        data.get(field)
+                        and isinstance(data[field], str)
+                        and data[field].startswith("http")
+                    ):
+                        meta["url"] = data[field]
+                        break
+
+            # Additional fallback: check if document ID is actually a URL
+            if (
+                not meta["url"]
+                and hasattr(result.document, "id")
+                and result.document.id
+            ):
+                if result.document.id.startswith("http"):
+                    meta["url"] = result.document.id
 
             if any(meta.values()):
                 aggregated_results.append(meta)
@@ -298,6 +345,7 @@ def main(total_results_needed: int, domain: str):
     ]
     dates = [r["date_published"] for r in aggregated_results if r.get("date_published")]
     sources = [r["source"] for r in aggregated_results if r.get("source")]
+    urls = [r["url"] for r in aggregated_results if r.get("url")]
 
     print(
         f"Search completed: {len(aggregated_results)} results over {len(pages_metadata)} pages"
@@ -305,8 +353,8 @@ def main(total_results_needed: int, domain: str):
     # Create structured results for JSON output
     structured_results = []
     max_length = (
-        max(len(titles), len(descriptions), len(dates), len(sources))
-        if any([titles, descriptions, dates, sources])
+        max(len(titles), len(descriptions), len(dates), len(sources), len(urls))
+        if any([titles, descriptions, dates, sources, urls])
         else 0
     )
 
@@ -316,6 +364,7 @@ def main(total_results_needed: int, domain: str):
             "description": descriptions[i] if i < len(descriptions) else None,
             "date_published": dates[i] if i < len(dates) else None,
             "source": sources[i] if i < len(sources) else None,
+            "url": urls[i] if i < len(urls) else None,
         }
         structured_results.append(result)
 
@@ -327,6 +376,7 @@ def main(total_results_needed: int, domain: str):
             "descriptions_count": len(descriptions),
             "dates_count": len(dates),
             "sources_count": len(sources),
+            "urls_count": len(urls),
         },
     }
 
@@ -352,8 +402,9 @@ if __name__ == "__main__":
         for i, result in enumerate(results):
             print(f"\n🔹 Result {i}")
             print(f"   Title       : {result['title'] or 'N/A'}")
-            print(f"    Description : {result['description'] or 'N/A'}")
-            print(f"     Published   : {result['date_published'] or 'N/A'}")
-            print(f"    Source      : {result['source'] or 'N/A'}")
+            print(f"   Description : {result['description'] or 'N/A'}")
+            print(f"   Published   : {result['date_published'] or 'N/A'}")
+            print(f"   Source      : {result['source'] or 'N/A'}")
+            print(f"   URL         : {result['url'] or 'N/A'}")
     else:
         print("No results found.")
