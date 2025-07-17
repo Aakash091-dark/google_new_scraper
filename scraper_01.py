@@ -2,6 +2,7 @@ from google.api_core.client_options import ClientOptions
 from google.cloud import discoveryengine_v1 as discoveryengine
 import os
 import time
+import json
 from typing import Optional
 from urllib.parse import urlparse
 
@@ -14,6 +15,7 @@ api_key = "AIzaSyDWp934QAIP3PJeEL3tw4LeLSxheI-kbpg"
 
 MAX_RETRIES = 5
 RETRY_DELAY = 5  # seconds
+
 
 def search(
     project_id: str,
@@ -69,6 +71,17 @@ def search(
             else:
                 print(f"Max retries reached. Giving up.")
                 return None
+
+
+def save_to_json(data, filename="search_results.json"):
+    """Save the search results to a JSON file."""
+    try:
+        with open(filename, "w", encoding="utf-8") as f:
+            json.dump(data, f, indent=2, ensure_ascii=False)
+        print(f"Results saved to {filename}")
+    except Exception as e:
+        print(f"Error saving to JSON: {e}")
+
 
 def main(total_results_needed: int, domain: str):
     search_query = f"{domain} Warehouse"
@@ -163,11 +176,15 @@ def main(total_results_needed: int, domain: str):
         "sources": sources or [],
     }
 
+
 if __name__ == "__main__":
     final_result = main(2, "warehouses in India")
 
     print("\n Final Results:")
     if final_result:
+        # Save to JSON
+        save_to_json(final_result)
+
         result_count = len(final_result["titles"])
         for i in range(result_count):
             print(f"\n🔹 Result {i}")
