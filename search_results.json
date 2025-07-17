@@ -1,43 +1,43 @@
 {
     "results": [
         {
-            "date_published": "2023-07-01T13:30:20+05:30",
-            "description": "EPACK Prefab currently has two manufacturing facilities in Rajasthan and Uttar Pradesh, with a total annual production capacity of 100,000 metric tonne of prefabricated material, which will double to 200,000 metric tonne with the addition of the new plant",
-            "source": "mint",
-            "title": "EPACK Prefab aims expansion of airport, warehouse construction services",
-            "url": "https://www.livemint.com/companies/news/epack-prefab-expands-airport-and-warehouse-construction-services-in-southern-india-aims-for-rs-1-000-crore-revenues-11688198421375.html"
+            "date_published": "2025-07-14T08:16:05+05:30",
+            "description": "Politicians are warming to the idea",
+            "source": "The Economist",
+            "title": "Can Nvidia persuade governments to pay for “sovereign” AI?",
+            "url": "https://www.livemint.com/technology/can-nvidia-persuade-governments-to-pay-for-sovereign-ai-11752590985477.html"
         },
         {
-            "date_published": "2024-01-19T15:54:32+05:30",
-            "description": "TECH NEWS : EPACK Prefab has announced its plan to construct what it claims \"India’s fastest factory building structure\" using prefab and PEB technology in a reco.",
+            "date_published": "2025-07-17T11:10:20+05:30",
+            "description": "Tech News : Nvidia CEO Jensen Huang praised Chinese AI models as \"world class\" at a Beijing expo, highlighting their open-source approach and global impact. This",
             "source": "The Times of India",
-            "title": "EPACK Prefab set on challenge to construct \"India’s fastest-built factory building in 150 hours\" - Times of India",
-            "url": "https://timesofindia.indiatimes.com/technology/tech-news/epack-prefab-set-on-challenge-to-construct-indias-fastest-built-factory-building-in-150-hours/articleshow/115530110.cms"
-        },
-        {
-            "date_published": "2024-01-30T10:00:08+05:30",
-            "description": "The warehousing demand in Andhra Pradesh is on the rise with newer locations emerging in this sector.",
-            "source": "The Times of India",
-            "title": "Visakhapatnam records 265% increase in warehousing in FY 2023 | Visakhapatnam News - Times of India",
-            "url": "https://timesofindia.indiatimes.com/city/visakhapatnam/visakhapatnam-records-265-increase-in-warehousing-in-fy-2023/articleshow/102861721.cms"
+            "title": "Nvidia CEO Jensen Huang calls Chinese AI models “world class”, including the one ‘banned’ by the US government - The Times of India",
+            "url": "https://timesofindia.indiatimes.com/technology/tech-news/nvidia-ceo-jensen-huang-calls-chinese-ai-models-world-class-including-the-one-banned-by-the-us-government/articleshow/122573397.cms"
         },
         {
             "date_published": null,
-            "description": "EPACK Durable IPO opens for subscription from January 19 to January 23, with a price band of  ₹218 to  ₹230 per share. EPACK Durable IPO comprises a fresh issue of  ₹400 crore and an offer-for-sale of 1.04 crore equity shares by promoters and other investors.",
+            "description": "Nvidia Corp. Chief Executive Officer Jensen Huang said the US government doesn’t need to be concerned that the Chinese military will use his company’s products to improve their capabilities.",
             "source": "mint",
-            "title": "EPACK Durable IPO: 10 key risks from RHP to know before subscribing to the IPO | Stock Market News",
-            "url": "https://www.livemint.com/market/ipo/epack-durable-ipo-opens-today-10-key-risks-from-rhp-to-consider-before-subscribing-to-the-ipo-11705657769324.html"
+            "title": "Nvidia CEO Jensen Huang says China’s military unlikely to use US AI Chips: ‘They simply can’t rely’ | Today News",
+            "url": "https://www.livemint.com/news/world/nvidia-ceo-jensen-huang-says-china-s-military-unlikely-to-use-us-ai-chips-11752460408769.html"
         },
         {
             "date_published": null,
-            "description": "EPACK Durable IPO share price listed at  ₹221 on NSE and  ₹225 on BSE, lower than the issue price. Analysts predicted a range of  ₹225 to  ₹235 per share.",
+            "description": "Indian retail investors ramped up US stock purchases amid global market volatility, with a strong tilt toward semiconductors, healthcare, AI, and small-cap ETFs. There was also a shift toward long-term, diversified global portfolios.",
             "source": "mint",
-            "title": "EPACK Durable shares make a weak debut, stock opens with 4% discount at  ₹221 | Stock Market News",
-            "url": "https://www.livemint.com/market/ipo/epack-durable-share-price-makes-a-weak-debut-stock-opens-with-4-discount-at-rs-221-on-nse-11706585962218.html"
+            "title": "Nvidia, Google, Tesla shares among top US stocks bought by Indian investors in Q1FY26 | Stock Market News",
+            "url": "https://www.livemint.com/market/stock-market-news/nvidia-google-tesla-shares-among-top-us-stocks-bought-by-indian-investors-in-q1fy26-11752729740100.html"
+        },
+        {
+            "date_published": null,
+            "description": "Tech News : US senators cautioned Nvidia CEO Jensen Huang about his upcoming China trip. They urged him to avoid companies undermining US chip export controls. Co",
+            "source": "The Times of India",
+            "title": "US senators send ‘warning letter’ to Nvidia CEO Jensen Huang: ‘We are worried that…’ - The Times of India",
+            "url": "https://timesofindia.indiatimes.com/technology/tech-news/us-senators-send-warning-letter-to-nvidia-ceo-jensen-huang-we-are-worried-that/articleshow/122406004.cms"
         }
     ],
     "summary": {
-        "dates_count": 3,
+        "dates_count": 2,
         "descriptions_count": 5,
         "sources_count": 5,
         "titles_count": 5,

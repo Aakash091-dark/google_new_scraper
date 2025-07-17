@@ -162,9 +162,11 @@ def save_to_json(data, filename="search_results.json"):
         print(f"Error saving to JSON: {e}")
 
 
-def main(total_results_needed: int, domain: str):
-    search_query = f"{domain} Warehouse"
-    print(f"Generated LinkedIn search query: {search_query}")
+def main(total_results_needed: int, keyword: str):
+    search_query = (
+        keyword  # Changed: Use keyword directly instead of appending "Warehouse"
+    )
+    print(f"Generated search query: {search_query}")
 
     aggregated_results = []
     pages_metadata = []
@@ -381,6 +383,7 @@ def main(total_results_needed: int, domain: str):
     }
 
 
+"""
 def save_news_by_source(news_items, folder="scraped_news"):
     os.makedirs(folder, exist_ok=True)
 
@@ -420,19 +423,21 @@ def save_news_by_source(news_items, folder="scraped_news"):
             print(f"✅ Added news to {filename}")
         else:
             print(f"⚠️ Duplicate news skipped in {filename}")
-
+"""
 
 if __name__ == "__main__":
     # Get user input
     try:
         total_results = int(input("Enter the number of results needed: "))
-        domain = input("Enter the domain/search term: ")
+        keyword = input("Enter the search keyword: ")  # Changed: Updated input prompt
     except ValueError:
         print("Invalid input for number of results. Using default value of 2.")
         total_results = 2
-        domain = input("Enter the domain/search term: ")
+        keyword = input("Enter the search keyword: ")  # Changed: Updated input prompt
 
-    final_result = main(total_results, domain)
+    final_result = main(
+        total_results, keyword
+    )  # Changed: Pass keyword instead of domain
 
     print("\nFinal Results:")
 
@@ -441,7 +446,7 @@ if __name__ == "__main__":
         save_to_json(final_result)
 
         # Save per source into separate files
-        save_news_by_source(final_result["results"])
+        # save_news_by_source(final_result["results"])
 
         # Display results
         results = final_result["results"]

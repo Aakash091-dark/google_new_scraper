@@ -1,0 +1,388 @@
+2025-07-17 13:17:11,313 - INFO - 
+[1/5] Processing: Bengaluru stampede: Karnataka govt blames RCB management for crowd surge that killed 11; cities Virat Kohli video | Bengaluru News - Times of India
+2025-07-17 13:17:11,313 - INFO - URL: https://timesofindia.indiatimes.com/city/bengaluru/bengaluru-stampede-karnataka-govt-blames-rcb-management-for-crowd-surge-that-killed-11-cities-virat-kohli-video/articleshow/122616111.cms
+2025-07-17 13:17:11,313 - INFO - Processing domain: timesofindia.indiatimes.com
+2025-07-17 13:17:11,452 - INFO - Fetched page successfully (Status: 200)
+2025-07-17 13:17:11,471 - INFO - Using specialized scraper: Times of India
+2025-07-17 13:17:11,475 - INFO - Content found using selector: div._s30J
+2025-07-17 13:17:11,479 - INFO - Saved to 'scraped_news\The_Times_of_India.json'
+2025-07-17 13:17:14,262 - INFO - 
+[2/5] Processing: Bengaluru stampede: Karnataka govt blames RCB, points to Virat Kohli video before victory parade
+2025-07-17 13:17:14,263 - INFO - URL: https://www.hindustantimes.com/india-news/bengaluru-stampede-karnataka-govt-blames-rcb-points-to-virat-kohli-video-before-victory-parade-101752735045550.html
+2025-07-17 13:17:14,263 - INFO - Processing domain: www.hindustantimes.com
+2025-07-17 13:17:14,360 - ERROR - HTTP error 403 for URL: https://www.hindustantimes.com/india-news/bengaluru-stampede-karnataka-govt-blames-rcb-points-to-virat-kohli-video-before-victory-parade-101752735045550.html
+2025-07-17 13:17:14,363 - INFO - Saved to 'scraped_news\Hindustan_Times.json'
+2025-07-17 13:17:15,838 - INFO - 
+[3/5] Processing: Karnataka govt blames RCB for Bengaluru stampede, cites excessive turnout
+2025-07-17 13:17:15,839 - INFO - URL: https://www.hindustantimes.com/cities/bengaluru-news/karnataka-govt-blames-rcb-for-bengaluru-stampede-cites-excessive-turnout-101752734638755.html
+2025-07-17 13:17:15,840 - INFO - Processing domain: www.hindustantimes.com
+2025-07-17 13:17:15,943 - ERROR - HTTP error 403 for URL: https://www.hindustantimes.com/cities/bengaluru-news/karnataka-govt-blames-rcb-for-bengaluru-stampede-cites-excessive-turnout-101752734638755.html
+2025-07-17 13:17:15,947 - INFO - Saved to 'scraped_news\Hindustan_Times.json'
+2025-07-17 13:17:18,766 - INFO - 
+[4/5] Processing: Karnataka government blames RCB for stampede during victory celebration parade
+2025-07-17 13:17:18,766 - INFO - URL: https://www.indiatoday.in/india/law-news/video/karnataka-government-blames-rcb-for-stampede-during-victory-celebration-parade-2757061-2025-07-17
+2025-07-17 13:17:18,767 - INFO - Processing domain: www.indiatoday.in
+2025-07-17 13:17:18,950 - INFO - Fetched page successfully (Status: 200)
+2025-07-17 13:17:18,962 - INFO - Using enhanced generic fallback scraper
+2025-07-17 13:17:18,983 - INFO - Content found using selector: article
+2025-07-17 13:17:18,987 - INFO - Saved to 'scraped_news\India_Today.json'
+2025-07-17 13:17:21,219 - INFO - 
+[5/5] Processing: Karnataka blames RCB posts about pass entry in report on June 4 stampede: �Virat Kohli's video clip�� | Today News
+2025-07-17 13:17:21,220 - INFO - URL: https://www.livemint.com/news/india/karnataka-blames-rcb-posts-about-pass-entry-in-report-on-june-4-stampede-virat-kohlis-video-clip-11752730891151.html
+2025-07-17 13:17:21,220 - INFO - Processing domain: www.livemint.com
+2025-07-17 13:17:21,713 - INFO - Fetched page successfully (Status: 200)
+2025-07-17 13:17:21,727 - INFO - Using specialized scraper: Livemint
+2025-07-17 13:17:21,739 - INFO - Saved to 'scraped_news\mint.json'
+2025-07-17 13:19:18,276 - INFO - 🚀 Starting enhanced news scraping...
+2025-07-17 13:19:18,277 - INFO - 
+[1/5] Processing: Bengaluru stampede: Karnataka govt blames RCB management for crowd surge that killed 11; cities Virat Kohli video | Bengaluru News - Times of India
+2025-07-17 13:19:18,277 - INFO - URL: https://timesofindia.indiatimes.com/city/bengaluru/bengaluru-stampede-karnataka-govt-blames-rcb-management-for-crowd-surge-that-killed-11-cities-virat-kohli-video/articleshow/122616111.cms
+2025-07-17 13:19:18,277 - INFO - Processing domain: timesofindia.indiatimes.com
+2025-07-17 13:19:18,441 - INFO - Fetched page successfully (Status: 200)
+2025-07-17 13:19:18,459 - INFO - Using specialized scraper: Times of India
+2025-07-17 13:19:18,464 - INFO - Content found using selector: div._s30J
+2025-07-17 13:19:18,464 - INFO - [SUCCESS] Successfully scraped content (3005 chars)
+2025-07-17 13:19:18,465 - INFO - Skipped: Already exists in 'scraped_news\The_Times_of_India.json'
+2025-07-17 13:19:19,589 - INFO - 
+[2/5] Processing: Bengaluru stampede: Karnataka govt blames RCB, points to Virat Kohli video before victory parade
+2025-07-17 13:19:19,590 - INFO - URL: https://www.hindustantimes.com/india-news/bengaluru-stampede-karnataka-govt-blames-rcb-points-to-virat-kohli-video-before-victory-parade-101752735045550.html
+2025-07-17 13:19:19,591 - INFO - Processing domain: www.hindustantimes.com
+2025-07-17 13:19:19,798 - ERROR - HTTP error 403 for URL: https://www.hindustantimes.com/india-news/bengaluru-stampede-karnataka-govt-blames-rcb-points-to-virat-kohli-video-before-victory-parade-101752735045550.html
+2025-07-17 13:19:19,798 - WARNING - [FAILED] Failed to scrape meaningful content
+2025-07-17 13:19:19,799 - INFO - Skipped: Already exists in 'scraped_news\Hindustan_Times.json'
+2025-07-17 13:19:22,199 - INFO - 
+[3/5] Processing: Karnataka govt blames RCB for Bengaluru stampede, cites excessive turnout
+2025-07-17 13:19:22,200 - INFO - URL: https://www.hindustantimes.com/cities/bengaluru-news/karnataka-govt-blames-rcb-for-bengaluru-stampede-cites-excessive-turnout-101752734638755.html
+2025-07-17 13:19:22,201 - INFO - Processing domain: www.hindustantimes.com
+2025-07-17 13:19:22,276 - ERROR - HTTP error 403 for URL: https://www.hindustantimes.com/cities/bengaluru-news/karnataka-govt-blames-rcb-for-bengaluru-stampede-cites-excessive-turnout-101752734638755.html
+2025-07-17 13:19:22,276 - WARNING - [FAILED] Failed to scrape meaningful content
+2025-07-17 13:19:22,278 - INFO - Skipped: Already exists in 'scraped_news\Hindustan_Times.json'
+2025-07-17 13:19:24,955 - INFO - 
+[4/5] Processing: Karnataka government blames RCB for stampede during victory celebration parade
+2025-07-17 13:19:24,955 - INFO - URL: https://www.indiatoday.in/india/law-news/video/karnataka-government-blames-rcb-for-stampede-during-victory-celebration-parade-2757061-2025-07-17
+2025-07-17 13:19:24,956 - INFO - Processing domain: www.indiatoday.in
+2025-07-17 13:19:25,072 - INFO - Fetched page successfully (Status: 200)
+2025-07-17 13:19:25,083 - INFO - Using enhanced generic fallback scraper
+2025-07-17 13:19:25,103 - INFO - Content found using selector: article
+2025-07-17 13:19:25,103 - INFO - [SUCCESS] Successfully scraped content (413 chars)
+2025-07-17 13:19:25,104 - INFO - Skipped: Already exists in 'scraped_news\India_Today.json'
+2025-07-17 13:19:26,462 - INFO - 
+[5/5] Processing: Karnataka blames RCB posts about pass entry in report on June 4 stampede: ‘Virat Kohli's video clip…’ | Today News
+2025-07-17 13:19:26,462 - INFO - URL: https://www.livemint.com/news/india/karnataka-blames-rcb-posts-about-pass-entry-in-report-on-june-4-stampede-virat-kohlis-video-clip-11752730891151.html
+2025-07-17 13:19:26,463 - INFO - Processing domain: www.livemint.com
+2025-07-17 13:19:26,714 - INFO - Fetched page successfully (Status: 200)
+2025-07-17 13:19:26,727 - INFO - Using specialized scraper: Livemint
+2025-07-17 13:19:26,735 - WARNING - [FAILED] Failed to scrape meaningful content
+2025-07-17 13:19:26,735 - INFO - Skipped: Already exists in 'scraped_news\mint.json'
+2025-07-17 13:19:28,557 - INFO - 
+✅ Scraping completed!
+2025-07-17 13:19:28,558 - INFO - 📊 Results: 2 successful, 3 failed
+2025-07-17 13:19:28,558 - INFO - 📁 Check the 'scraped_news' folder for results.
+2025-07-17 14:29:53,216 - INFO -  Starting news scraper...
+2025-07-17 14:29:53,217 - INFO - 
+[1/5] Processing: Bengaluru stampede: Karnataka govt blames RCB management for crowd surge that killed 11; cities Virat Kohli video | Bengaluru News - Times of India
+2025-07-17 14:29:53,218 - INFO - Source: The Times of India
+2025-07-17 14:29:53,218 - INFO - URL: https://timesofindia.indiatimes.com/city/bengaluru/bengaluru-stampede-karnataka-govt-blames-rcb-management-for-crowd-surge-that-killed-11-cities-virat-kohli-video/articleshow/122616111.cms
+2025-07-17 14:29:53,387 - INFO - Using generic scraper
+2025-07-17 14:29:53,395 - WARNING -  Failed to scrape meaningful content
+2025-07-17 14:29:53,396 - INFO -  Duplicate found, skipping: https://timesofindia.indiatimes.com/city/bengaluru/bengaluru-stampede-karnataka-govt-blames-rcb-management-for-crowd-surge-that-killed-11-cities-virat-kohli-video/articleshow/122616111.cms
+2025-07-17 14:29:56,178 - INFO - 
+[2/5] Processing: Bengaluru stampede: Karnataka govt blames RCB, points to Virat Kohli video before victory parade
+2025-07-17 14:29:56,178 - INFO - Source: Hindustan Times
+2025-07-17 14:29:56,179 - INFO - URL: https://www.hindustantimes.com/india-news/bengaluru-stampede-karnataka-govt-blames-rcb-points-to-virat-kohli-video-before-victory-parade-101752735045550.html
+2025-07-17 14:29:56,328 - ERROR - Failed to fetch https://www.hindustantimes.com/india-news/bengaluru-stampede-karnataka-govt-blames-rcb-points-to-virat-kohli-video-before-victory-parade-101752735045550.html: 403 Client Error: Forbidden for url: https://www.hindustantimes.com/india-news/bengaluru-stampede-karnataka-govt-blames-rcb-points-to-virat-kohli-video-before-victory-parade-101752735045550.html
+2025-07-17 14:29:56,329 - WARNING -  Failed to scrape meaningful content
+2025-07-17 14:29:56,329 - INFO -  Duplicate found, skipping: https://www.hindustantimes.com/india-news/bengaluru-stampede-karnataka-govt-blames-rcb-points-to-virat-kohli-video-before-victory-parade-101752735045550.html
+2025-07-17 14:29:58,517 - INFO - 
+[3/5] Processing: Karnataka govt blames RCB for Bengaluru stampede, cites excessive turnout
+2025-07-17 14:29:58,517 - INFO - Source: Hindustan Times
+2025-07-17 14:29:58,518 - INFO - URL: https://www.hindustantimes.com/cities/bengaluru-news/karnataka-govt-blames-rcb-for-bengaluru-stampede-cites-excessive-turnout-101752734638755.html
+2025-07-17 14:29:58,612 - ERROR - Failed to fetch https://www.hindustantimes.com/cities/bengaluru-news/karnataka-govt-blames-rcb-for-bengaluru-stampede-cites-excessive-turnout-101752734638755.html: 403 Client Error: Forbidden for url: https://www.hindustantimes.com/cities/bengaluru-news/karnataka-govt-blames-rcb-for-bengaluru-stampede-cites-excessive-turnout-101752734638755.html
+2025-07-17 14:29:58,612 - WARNING -  Failed to scrape meaningful content
+2025-07-17 14:29:58,613 - INFO -  Duplicate found, skipping: https://www.hindustantimes.com/cities/bengaluru-news/karnataka-govt-blames-rcb-for-bengaluru-stampede-cites-excessive-turnout-101752734638755.html
+2025-07-17 14:30:00,505 - INFO - 
+[4/5] Processing: Karnataka government blames RCB for stampede during victory celebration parade
+2025-07-17 14:30:00,505 - INFO - Source: India Today
+2025-07-17 14:30:00,506 - INFO - URL: https://www.indiatoday.in/india/law-news/video/karnataka-government-blames-rcb-for-stampede-during-victory-celebration-parade-2757061-2025-07-17
+2025-07-17 14:30:00,726 - INFO - Using India Today scraper
+2025-07-17 14:30:00,727 - INFO -  Successfully scraped (402 chars)
+2025-07-17 14:30:00,728 - INFO -  Duplicate found, skipping: https://www.indiatoday.in/india/law-news/video/karnataka-government-blames-rcb-for-stampede-during-victory-celebration-parade-2757061-2025-07-17
+2025-07-17 14:30:01,967 - INFO - 
+[5/5] Processing: Karnataka blames RCB posts about pass entry in report on June 4 stampede: ‘Virat Kohli's video clip…’ | Today News
+2025-07-17 14:30:01,967 - INFO - Source: mint
+2025-07-17 14:30:01,968 - INFO - URL: https://www.livemint.com/news/india/karnataka-blames-rcb-posts-about-pass-entry-in-report-on-june-4-stampede-virat-kohlis-video-clip-11752730891151.html
+2025-07-17 14:30:02,242 - INFO - Using generic scraper
+2025-07-17 14:30:02,244 - WARNING -  Failed to scrape meaningful content
+2025-07-17 14:30:02,245 - INFO -  Duplicate found, skipping: https://www.livemint.com/news/india/karnataka-blames-rcb-posts-about-pass-entry-in-report-on-june-4-stampede-virat-kohlis-video-clip-11752730891151.html
+2025-07-17 14:30:27,278 - INFO -  Starting news scraper...
+2025-07-17 14:30:27,279 - INFO - 
+[1/5] Processing: 10 best laptops for working professionals to handle multitasking with ease: Top picks that are light, fast and efficient | Mint
+2025-07-17 14:30:27,279 - INFO - Source: mint
+2025-07-17 14:30:27,280 - INFO - URL: https://www.livemint.com/technology/gadgets/10-best-laptops-for-working-professionals-to-handle-multitasking-with-ease-top-picks-that-are-light-fast-and-efficient-11750329782800.html
+2025-07-17 14:30:27,837 - INFO - Using generic scraper
+2025-07-17 14:30:27,848 - WARNING -  Failed to scrape meaningful content
+2025-07-17 14:30:27,850 - INFO - Saved to scraped_news\mint.json
+2025-07-17 14:30:30,138 - INFO - 
+[2/5] Processing: 10 best laptops for working professional that offers power and productivity: Top picks for doing everyday work with ease
+2025-07-17 14:30:30,139 - INFO - Source: Hindustan Times
+2025-07-17 14:30:30,139 - INFO - URL: https://www.hindustantimes.com/technology/10-best-laptops-for-working-professional-that-offers-power-and-productivity-top-picks-for-doing-everyday-work-with-ease-101750669527768.html
+2025-07-17 14:30:30,356 - ERROR - Failed to fetch https://www.hindustantimes.com/technology/10-best-laptops-for-working-professional-that-offers-power-and-productivity-top-picks-for-doing-everyday-work-with-ease-101750669527768.html: 403 Client Error: Forbidden for url: https://www.hindustantimes.com/technology/10-best-laptops-for-working-professional-that-offers-power-and-productivity-top-picks-for-doing-everyday-work-with-ease-101750669527768.html
+2025-07-17 14:30:30,356 - WARNING -  Failed to scrape meaningful content
+2025-07-17 14:30:30,358 - INFO - Saved to scraped_news\Hindustan_Times.json
+2025-07-17 14:30:32,433 - INFO - 
+[3/5] Processing: Best slim laptops for portability and performance: Top 10 picks from top brands | Mint
+2025-07-17 14:30:32,434 - INFO - Source: mint
+2025-07-17 14:30:32,435 - INFO - URL: https://www.livemint.com/technology/gadgets/best-slim-laptops-for-portability-and-performance-top-10-picks-from-top-brands-11751008463607.html
+2025-07-17 14:30:32,777 - INFO - Using generic scraper
+2025-07-17 14:30:32,787 - WARNING -  Failed to scrape meaningful content
+2025-07-17 14:30:32,789 - INFO - Saved to scraped_news\mint.json
+2025-07-17 14:30:34,812 - INFO - 
+[4/5] Processing: LG BRINGS THE POWER OF AI TO ULTRA-LIGHT LAPTOPS WITH NEW LG GRAM PRO MODELS
+2025-07-17 14:30:34,813 - INFO - Source: www.prnewswire.com
+2025-07-17 14:30:34,813 - INFO - URL: https://www.prnewswire.com/news-releases/lg-brings-the-power-of-ai-to-ultra-light-laptops-with-new-lg-gram-pro-models-302506509.html
+2025-07-17 14:30:35,187 - INFO - Using generic scraper
+2025-07-17 14:30:35,191 - INFO -  Successfully scraped (4906 chars)
+2025-07-17 14:30:35,193 - INFO - Saved to scraped_news\wwwprnewswirecom.json
+2025-07-17 14:30:38,062 - INFO - 
+[5/5] Processing: U.S. PRICING & AVAILABILITY OF 2025 LG GRAM LAPTOPS ANNOUNCED
+2025-07-17 14:30:38,063 - INFO - Source: www.prnewswire.com
+2025-07-17 14:30:38,063 - INFO - URL: https://www.prnewswire.com/news-releases/us-pricing--availability-of-2025-lg-gram-laptops-announced-302382737.html
+2025-07-17 14:30:38,218 - INFO - Using generic scraper
+2025-07-17 14:30:38,223 - INFO -  Successfully scraped (1597 chars)
+2025-07-17 14:30:38,227 - INFO - Saved to scraped_news\wwwprnewswirecom.json
+2025-07-17 14:30:39,229 - INFO - 
+ SUMMARY:
+2025-07-17 14:30:39,230 - INFO -  Successful: 2
+2025-07-17 14:30:39,231 - INFO -  Failed: 3
+2025-07-17 14:30:39,231 - INFO -  Results saved in: scraped_news
+2025-07-17 14:34:40,628 - INFO -  Starting news scraper...
+2025-07-17 14:34:40,629 - INFO - 
+[1/8] Processing: Guardian Bikes Powers American Comeback with Nation's First High-Volume Bicycle Frame Manufacturing Plant
+2025-07-17 14:34:40,629 - INFO - Source: www.prnewswire.com
+2025-07-17 14:34:40,629 - INFO - URL: https://www.prnewswire.com/news-releases/guardian-bikes-powers-american-comeback-with-nations-first-high-volume-bicycle-frame-manufacturing-plant-302425931.html
+2025-07-17 14:34:40,908 - INFO - Using PR Newswire scraper
+2025-07-17 14:34:40,909 - WARNING -  Failed to scrape meaningful content
+2025-07-17 14:34:40,911 - INFO -  Saved to scraped_news\wwwprnewswirecom.json
+2025-07-17 14:34:42,209 - INFO - 
+[2/8] Processing: All Terrain Road Bikes Market to Reach $921.9M by 2030 | Key Trends & Growth Insights - Valuates Reports
+2025-07-17 14:34:42,209 - INFO - Source: www.prnewswire.com
+2025-07-17 14:34:42,209 - INFO - URL: https://www.prnewswire.com/news-releases/all-terrain-road-bikes-market-to-reach-921-9m-by-2030--key-trends--growth-insights---valuates-reports-302366458.html
+2025-07-17 14:34:43,706 - INFO - Using PR Newswire scraper
+2025-07-17 14:34:43,708 - WARNING -  Failed to scrape meaningful content
+2025-07-17 14:34:43,710 - INFO -  Saved to scraped_news\wwwprnewswirecom.json
+2025-07-17 14:34:46,385 - INFO - 
+[3/8] Processing: High-End Bicycle Market to grow by USD 6.5 Billion (2025-2029), driven by e-bike adoption in developing countries, AI's role in market evolution - Technavio
+2025-07-17 14:34:46,385 - INFO - Source: www.prnewswire.com
+2025-07-17 14:34:46,385 - INFO - URL: https://www.prnewswire.com/news-releases/high-end-bicycle-market-to-grow-by-usd-6-5-billion-2025-2029-driven-by-e-bike-adoption-in-developing-countries-ais-role-in-market-evolution---technavio-302360366.html
+2025-07-17 14:34:48,169 - INFO - Using PR Newswire scraper
+2025-07-17 14:34:48,171 - WARNING -  Failed to scrape meaningful content
+2025-07-17 14:34:48,173 - INFO -  Saved to scraped_news\wwwprnewswirecom.json
+2025-07-17 14:34:50,649 - INFO - 
+[4/8] Processing: The Hidden Dangers of E-Bikes: Orthopaedic Surgeons Warn of Rising Injury Risks for Riders of All Ages
+2025-07-17 14:34:50,650 - INFO - Source: www.prnewswire.com
+2025-07-17 14:34:50,650 - INFO - URL: https://www.prnewswire.com/news/rad-power-bikes/
+2025-07-17 14:34:52,220 - INFO - Using PR Newswire scraper
+2025-07-17 14:34:52,221 - WARNING -  Failed to scrape meaningful content
+2025-07-17 14:34:52,224 - INFO -  Saved to scraped_news\wwwprnewswirecom.json
+2025-07-17 14:34:54,650 - INFO - 
+[5/8] Processing: Segway Releases Details and Opens Pre-Orders on Highly Anticipated e-Bikes
+2025-07-17 14:34:54,650 - INFO - Source: www.prnewswire.com
+2025-07-17 14:34:54,651 - INFO - URL: https://www.prnewswire.com/news-releases/the-hidden-dangers-of-e-bikes-orthopaedic-surgeons-warn-of-rising-injury-risks-for-riders-of-all-ages-302464448.html
+2025-07-17 14:34:56,102 - INFO - Using PR Newswire scraper
+2025-07-17 14:34:56,104 - WARNING -  Failed to scrape meaningful content
+2025-07-17 14:34:56,106 - INFO -  Saved to scraped_news\wwwprnewswirecom.json
+2025-07-17 14:34:57,253 - INFO - 
+[6/8] Processing: Trek Reveals Its Most Tricked-Out Custom Bikes Ever with Project One Superlatives
+2025-07-17 14:34:57,254 - INFO - Source: www.prnewswire.com
+2025-07-17 14:34:57,254 - INFO - URL: https://www.prnewswire.com/news-releases/segway-releases-details-and-opens-pre-orders-on-highly-anticipated-e-bikes-302343685.html
+2025-07-17 14:34:58,204 - INFO - Using PR Newswire scraper
+2025-07-17 14:34:58,206 - WARNING -  Failed to scrape meaningful content
+2025-07-17 14:34:58,208 - INFO -  Saved to scraped_news\wwwprnewswirecom.json
+2025-07-17 14:35:00,529 - INFO - 
+[7/8] Processing: Mountain Bike Market to grow by USD 3.78 Billion from 2024-2028, driven by mountain biking tourism, with AI driving market transformation - Technavio
+2025-07-17 14:35:00,529 - INFO - Source: www.prnewswire.com
+2025-07-17 14:35:00,530 - INFO - URL: https://www.prnewswire.com/news-releases/trek-reveals-its-most-tricked-out-custom-bikes-ever-with-project-one-superlatives-302230553.html
+2025-07-17 14:35:00,665 - INFO - Using PR Newswire scraper
+2025-07-17 14:35:00,666 - WARNING -  Failed to scrape meaningful content
+2025-07-17 14:35:00,668 - INFO -  Saved to scraped_news\wwwprnewswirecom.json
+2025-07-17 14:35:03,607 - INFO - 
+[8/8] Processing: None
+2025-07-17 14:35:03,607 - INFO - Source: None
+2025-07-17 14:35:03,608 - INFO - URL: https://www.prnewswire.com/news-releases/mountain-bike-market-to-grow-by-usd-3-78-billion-from-2024-2028--driven-by-mountain-biking-tourism-with-ai-driving-market-transformation---technavio-302325751.html
+2025-07-17 14:35:03,712 - INFO - Using generic scraper
+2025-07-17 14:35:03,717 - INFO -  Successfully scraped (9158 chars)
+2025-07-17 14:35:03,717 - ERROR -  Error processing article: 'NoneType' object is not iterable
+2025-07-17 14:35:05,421 - INFO - 
+ SUMMARY:
+2025-07-17 14:35:05,422 - INFO -  Successful: 1
+2025-07-17 14:35:05,422 - INFO -  Failed: 8
+2025-07-17 14:35:05,423 - INFO -  Results saved in: scraped_news
+2025-07-17 14:40:24,067 - INFO -  Starting news scraper (No API required)...
+2025-07-17 14:40:24,068 - INFO - 
+=== Scraping Economic Times ===
+2025-07-17 14:40:24,068 - INFO - Fetching links from: https://economictimes.indiatimes.com/news
+2025-07-17 14:40:24,483 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2025-07-17 14:40:24,487 - INFO - Found 0 links from https://economictimes.indiatimes.com/news
+2025-07-17 14:40:26,217 - INFO - Fetching links from: https://economictimes.indiatimes.com/markets
+2025-07-17 14:40:26,715 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2025-07-17 14:40:26,718 - INFO - Found 0 links from https://economictimes.indiatimes.com/markets
+2025-07-17 14:40:28,387 - INFO - Fetching links from: https://economictimes.indiatimes.com/tech
+2025-07-17 14:40:28,653 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2025-07-17 14:40:28,656 - INFO - Found 0 links from https://economictimes.indiatimes.com/tech
+2025-07-17 14:40:30,002 - INFO - Processing 0 unique articles from Economic Times
+2025-07-17 14:40:30,004 - INFO - No new articles to save for Economic Times
+2025-07-17 14:40:30,005 - INFO - Economic Times: 0 successful, 0 failed
+2025-07-17 14:40:33,725 - INFO - 
+=== Scraping LiveMint ===
+2025-07-17 14:40:33,726 - INFO - Fetching links from: https://www.livemint.com/news
+2025-07-17 14:40:34,381 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2025-07-17 14:40:34,384 - INFO - Found 0 links from https://www.livemint.com/news
+2025-07-17 14:40:35,940 - INFO - Fetching links from: https://www.livemint.com/market
+2025-07-17 14:40:36,421 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2025-07-17 14:40:36,425 - INFO - Found 0 links from https://www.livemint.com/market
+2025-07-17 14:40:38,386 - INFO - Fetching links from: https://www.livemint.com/technology
+2025-07-17 14:40:38,803 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2025-07-17 14:40:38,807 - INFO - Found 0 links from https://www.livemint.com/technology
+2025-07-17 14:40:40,139 - INFO - Processing 0 unique articles from LiveMint
+2025-07-17 14:40:40,140 - INFO - No new articles to save for LiveMint
+2025-07-17 14:40:40,141 - INFO - LiveMint: 0 successful, 0 failed
+2025-07-17 14:40:42,645 - INFO - 
+=== Scraping The Hindu ===
+2025-07-17 14:40:42,646 - INFO - Fetching links from: https://www.thehindu.com/news/
+2025-07-17 14:40:42,873 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2025-07-17 14:40:42,876 - INFO - Found 0 links from https://www.thehindu.com/news/
+2025-07-17 14:40:44,815 - INFO - Fetching links from: https://www.thehindu.com/business/
+2025-07-17 14:40:44,979 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2025-07-17 14:40:44,981 - INFO - Found 0 links from https://www.thehindu.com/business/
+2025-07-17 14:40:46,378 - INFO - Fetching links from: https://www.thehindu.com/sci-tech/
+2025-07-17 14:40:46,559 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2025-07-17 14:40:46,562 - INFO - Found 0 links from https://www.thehindu.com/sci-tech/
+2025-07-17 14:40:47,706 - INFO - Processing 0 unique articles from The Hindu
+2025-07-17 14:40:47,707 - INFO - No new articles to save for The Hindu
+2025-07-17 14:40:47,707 - INFO - The Hindu: 0 successful, 0 failed
+2025-07-17 14:53:23,507 - INFO -  Starting news scraper (No API required)...
+2025-07-17 14:53:23,507 - INFO - 
+=== Scraping Economic Times ===
+2025-07-17 14:53:23,508 - INFO - Fetching links from: https://economictimes.indiatimes.com/news
+2025-07-17 14:53:23,853 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2025-07-17 14:53:23,856 - INFO - Found 0 links from https://economictimes.indiatimes.com/news
+2025-07-17 14:53:25,727 - INFO - Fetching links from: https://economictimes.indiatimes.com/markets
+2025-07-17 14:53:26,229 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2025-07-17 14:53:26,233 - INFO - Found 0 links from https://economictimes.indiatimes.com/markets
+2025-07-17 14:53:28,015 - INFO - Fetching links from: https://economictimes.indiatimes.com/tech
+2025-07-17 14:53:28,275 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2025-07-17 14:53:28,278 - INFO - Found 0 links from https://economictimes.indiatimes.com/tech
+2025-07-17 14:53:30,205 - INFO - Processing 0 unique articles from Economic Times
+2025-07-17 14:53:30,206 - INFO - No new articles to save for Economic Times
+2025-07-17 14:53:30,206 - INFO - Economic Times: 0 successful, 0 failed
+2025-07-17 14:53:49,001 - INFO - Reading URLs from search_results.json
+2025-07-17 14:53:49,002 - INFO - [1/5] Processing: https://www.livemint.com/technology/can-nvidia-persuade-governments-to-pay-for-sovereign-ai-11752590985477.html
+2025-07-17 14:53:49,226 - INFO - Using LiveMint scraper
+2025-07-17 14:53:50,440 - INFO - [2/5] Processing: https://timesofindia.indiatimes.com/technology/tech-news/nvidia-ceo-jensen-huang-calls-chinese-ai-models-world-class-including-the-one-banned-by-the-us-government/articleshow/122573397.cms
+2025-07-17 14:53:50,669 - INFO - Using Times of India scraper
+2025-07-17 14:53:52,922 - INFO - [3/5] Processing: https://www.livemint.com/news/world/nvidia-ceo-jensen-huang-says-china-s-military-unlikely-to-use-us-ai-chips-11752460408769.html
+2025-07-17 14:53:53,013 - INFO - Using LiveMint scraper
+2025-07-17 14:53:54,933 - INFO - [4/5] Processing: https://www.livemint.com/market/stock-market-news/nvidia-google-tesla-shares-among-top-us-stocks-bought-by-indian-investors-in-q1fy26-11752729740100.html
+2025-07-17 14:53:55,017 - INFO - Using LiveMint scraper
+2025-07-17 14:53:56,898 - INFO - [5/5] Processing: https://timesofindia.indiatimes.com/technology/tech-news/us-senators-send-warning-letter-to-nvidia-ceo-jensen-huang-we-are-worried-that/articleshow/122406004.cms
+2025-07-17 14:53:56,989 - INFO - Using Times of India scraper
+2025-07-17 14:53:59,618 - INFO - Saved 3 articles to scraped_news\LiveMint.json
+2025-07-17 14:53:59,619 - INFO - Saved 2 articles to scraped_news\Times_of_India.json
+2025-07-17 14:53:59,619 - INFO - ✅ Done scraping all URLs.
+2025-07-17 14:57:15,059 - INFO - Reading URLs from search_results.json
+2025-07-17 14:57:15,060 - INFO - [1/5] Processing: https://www.livemint.com/technology/can-nvidia-persuade-governments-to-pay-for-sovereign-ai-11752590985477.html
+2025-07-17 14:57:15,296 - INFO - Using LiveMint scraper
+2025-07-17 14:57:18,051 - INFO - [2/5] Processing: https://timesofindia.indiatimes.com/technology/tech-news/nvidia-ceo-jensen-huang-calls-chinese-ai-models-world-class-including-the-one-banned-by-the-us-government/articleshow/122573397.cms
+2025-07-17 14:57:18,313 - INFO - Using Times of India scraper
+2025-07-17 14:57:19,867 - INFO - [3/5] Processing: https://www.livemint.com/news/world/nvidia-ceo-jensen-huang-says-china-s-military-unlikely-to-use-us-ai-chips-11752460408769.html
+2025-07-17 14:57:19,958 - INFO - Using LiveMint scraper
+2025-07-17 14:57:21,213 - INFO - [4/5] Processing: https://www.livemint.com/market/stock-market-news/nvidia-google-tesla-shares-among-top-us-stocks-bought-by-indian-investors-in-q1fy26-11752729740100.html
+2025-07-17 14:57:21,300 - INFO - Using LiveMint scraper
+2025-07-17 14:57:23,075 - INFO - [5/5] Processing: https://timesofindia.indiatimes.com/technology/tech-news/us-senators-send-warning-letter-to-nvidia-ceo-jensen-huang-we-are-worried-that/articleshow/122406004.cms
+2025-07-17 14:57:23,190 - INFO - Using Times of India scraper
+2025-07-17 14:57:25,175 - INFO - Saved 3 articles to scraped_news\LiveMint.json
+2025-07-17 14:57:25,176 - INFO - Saved 2 articles to scraped_news\Times_of_India.json
+2025-07-17 14:57:25,176 - INFO - ✅ Done scraping all URLs.
+2025-07-17 14:59:39,116 - INFO - Reading URLs from search_results.json
+2025-07-17 14:59:39,116 - INFO - [1/5] Processing: https://www.livemint.com/technology/can-nvidia-persuade-governments-to-pay-for-sovereign-ai-11752590985477.html
+2025-07-17 14:59:39,296 - INFO - Using LiveMint scraper
+2025-07-17 14:59:39,306 - INFO - Using generic scraper
+2025-07-17 14:59:41,144 - INFO - [2/5] Processing: https://timesofindia.indiatimes.com/technology/tech-news/nvidia-ceo-jensen-huang-calls-chinese-ai-models-world-class-including-the-one-banned-by-the-us-government/articleshow/122573397.cms
+2025-07-17 14:59:41,386 - INFO - Using Times of India scraper
+2025-07-17 14:59:44,183 - INFO - [3/5] Processing: https://www.livemint.com/news/world/nvidia-ceo-jensen-huang-says-china-s-military-unlikely-to-use-us-ai-chips-11752460408769.html
+2025-07-17 14:59:44,263 - INFO - Using LiveMint scraper
+2025-07-17 14:59:44,273 - INFO - Using generic scraper
+2025-07-17 14:59:46,824 - INFO - [4/5] Processing: https://www.livemint.com/market/stock-market-news/nvidia-google-tesla-shares-among-top-us-stocks-bought-by-indian-investors-in-q1fy26-11752729740100.html
+2025-07-17 14:59:46,898 - INFO - Using LiveMint scraper
+2025-07-17 14:59:46,909 - INFO - Using generic scraper
+2025-07-17 14:59:49,708 - INFO - [5/5] Processing: https://timesofindia.indiatimes.com/technology/tech-news/us-senators-send-warning-letter-to-nvidia-ceo-jensen-huang-we-are-worried-that/articleshow/122406004.cms
+2025-07-17 14:59:49,794 - INFO - Using Times of India scraper
+2025-07-17 14:59:52,085 - INFO - Saved 3 articles to scraped_news\LiveMint.json
+2025-07-17 14:59:52,087 - INFO - Saved 2 articles to scraped_news\Times_of_India.json
+2025-07-17 14:59:52,087 - INFO - ✅ Done scraping all URLs.
+2025-07-17 15:04:07,339 - INFO - Reading URLs from search_results.json
+2025-07-17 15:04:07,340 - INFO - [1/5] Processing: https://www.livemint.com/technology/can-nvidia-persuade-governments-to-pay-for-sovereign-ai-11752590985477.html
+2025-07-17 15:04:07,580 - INFO - Using LiveMint scraper
+2025-07-17 15:04:07,590 - INFO - Using generic scraper
+2025-07-17 15:04:10,423 - INFO - [2/5] Processing: https://timesofindia.indiatimes.com/technology/tech-news/nvidia-ceo-jensen-huang-calls-chinese-ai-models-world-class-including-the-one-banned-by-the-us-government/articleshow/122573397.cms
+2025-07-17 15:04:10,676 - INFO - Using Times of India scraper
+2025-07-17 15:04:12,002 - INFO - [3/5] Processing: https://www.livemint.com/news/world/nvidia-ceo-jensen-huang-says-china-s-military-unlikely-to-use-us-ai-chips-11752460408769.html
+2025-07-17 15:04:12,095 - INFO - Using LiveMint scraper
+2025-07-17 15:04:12,105 - INFO - Using generic scraper
+2025-07-17 15:04:14,070 - INFO - [4/5] Processing: https://www.livemint.com/market/stock-market-news/nvidia-google-tesla-shares-among-top-us-stocks-bought-by-indian-investors-in-q1fy26-11752729740100.html
+2025-07-17 15:04:14,157 - INFO - Using LiveMint scraper
+2025-07-17 15:04:14,167 - INFO - Using generic scraper
+2025-07-17 15:04:16,298 - INFO - [5/5] Processing: https://timesofindia.indiatimes.com/technology/tech-news/us-senators-send-warning-letter-to-nvidia-ceo-jensen-huang-we-are-worried-that/articleshow/122406004.cms
+2025-07-17 15:04:16,386 - INFO - Using Times of India scraper
+2025-07-17 15:04:19,029 - INFO - Saved 3 articles to scraped_news\LiveMint.json
+2025-07-17 15:04:19,031 - INFO - Saved 2 articles to scraped_news\Times_of_India.json
+2025-07-17 15:04:19,031 - INFO - ✅ Done scraping all URLs.
+2025-07-17 15:05:00,918 - INFO - Reading URLs from search_results.json
+2025-07-17 15:05:00,918 - INFO - [1/5] Processing: https://www.livemint.com/technology/can-nvidia-persuade-governments-to-pay-for-sovereign-ai-11752590985477.html
+2025-07-17 15:05:01,319 - INFO - Using LiveMint scraper
+2025-07-17 15:05:01,329 - INFO - Using generic scraper
+2025-07-17 15:05:02,535 - INFO - [2/5] Processing: https://timesofindia.indiatimes.com/technology/tech-news/nvidia-ceo-jensen-huang-calls-chinese-ai-models-world-class-including-the-one-banned-by-the-us-government/articleshow/122573397.cms
+2025-07-17 15:05:02,719 - INFO - Using Times of India scraper
+2025-07-17 15:05:04,002 - INFO - [3/5] Processing: https://www.livemint.com/news/world/nvidia-ceo-jensen-huang-says-china-s-military-unlikely-to-use-us-ai-chips-11752460408769.html
+2025-07-17 15:05:04,087 - INFO - Using LiveMint scraper
+2025-07-17 15:05:04,097 - INFO - Using generic scraper
+2025-07-17 15:05:06,576 - INFO - [4/5] Processing: https://www.livemint.com/market/stock-market-news/nvidia-google-tesla-shares-among-top-us-stocks-bought-by-indian-investors-in-q1fy26-11752729740100.html
+2025-07-17 15:05:06,659 - INFO - Using LiveMint scraper
+2025-07-17 15:05:06,668 - INFO - Using generic scraper
+2025-07-17 15:05:07,676 - INFO - [5/5] Processing: https://timesofindia.indiatimes.com/technology/tech-news/us-senators-send-warning-letter-to-nvidia-ceo-jensen-huang-we-are-worried-that/articleshow/122406004.cms
+2025-07-17 15:05:07,760 - INFO - Using Times of India scraper
+2025-07-17 15:05:09,407 - INFO - Saved 3 articles to scraped_news\LiveMint.json
+2025-07-17 15:05:09,408 - INFO - Saved 2 articles to scraped_news\Times_of_India.json
+2025-07-17 15:05:09,408 - INFO - ✅ Done scraping all URLs.
+2025-07-17 15:05:54,802 - INFO - Reading URLs from search_results.json
+2025-07-17 15:05:54,803 - INFO - [1/5] Processing: https://www.livemint.com/technology/can-nvidia-persuade-governments-to-pay-for-sovereign-ai-11752590985477.html
+2025-07-17 15:05:54,981 - INFO - Using LiveMint scraper
+2025-07-17 15:05:54,989 - INFO - Using generic scraper
+2025-07-17 15:05:56,449 - INFO - [2/5] Processing: https://timesofindia.indiatimes.com/technology/tech-news/nvidia-ceo-jensen-huang-calls-chinese-ai-models-world-class-including-the-one-banned-by-the-us-government/articleshow/122573397.cms
+2025-07-17 15:05:56,678 - INFO - Using Times of India scraper
+2025-07-17 15:05:58,702 - INFO - [3/5] Processing: https://www.livemint.com/news/world/nvidia-ceo-jensen-huang-says-china-s-military-unlikely-to-use-us-ai-chips-11752460408769.html
+2025-07-17 15:05:58,791 - INFO - Using LiveMint scraper
+2025-07-17 15:05:58,799 - INFO - Using generic scraper
+2025-07-17 15:06:01,747 - INFO - [4/5] Processing: https://www.livemint.com/market/stock-market-news/nvidia-google-tesla-shares-among-top-us-stocks-bought-by-indian-investors-in-q1fy26-11752729740100.html
+2025-07-17 15:06:01,818 - INFO - Using LiveMint scraper
+2025-07-17 15:06:01,827 - INFO - Using generic scraper
+2025-07-17 15:06:02,861 - INFO - [5/5] Processing: https://timesofindia.indiatimes.com/technology/tech-news/us-senators-send-warning-letter-to-nvidia-ceo-jensen-huang-we-are-worried-that/articleshow/122406004.cms
+2025-07-17 15:06:02,971 - INFO - Using Times of India scraper
+2025-07-17 15:06:05,657 - INFO - Saved 3 articles to scraped_news\LiveMint.json
+2025-07-17 15:06:05,659 - INFO - ✅ Done scraping all URLs.
+2025-07-17 15:09:46,788 - INFO - Reading URLs from search_results.json
+2025-07-17 15:09:46,788 - INFO - [1/5] Processing: https://www.livemint.com/technology/can-nvidia-persuade-governments-to-pay-for-sovereign-ai-11752590985477.html
+2025-07-17 15:09:47,127 - INFO - Using enhanced LiveMint scraper
+2025-07-17 15:09:47,163 - INFO - Success with selector: div[id*="article"]
+2025-07-17 15:09:48,305 - INFO - [2/5] Processing: https://timesofindia.indiatimes.com/technology/tech-news/nvidia-ceo-jensen-huang-calls-chinese-ai-models-world-class-including-the-one-banned-by-the-us-government/articleshow/122573397.cms
+2025-07-17 15:09:48,597 - INFO - Using Times of India scraper
+2025-07-17 15:09:49,761 - INFO - [3/5] Processing: https://www.livemint.com/news/world/nvidia-ceo-jensen-huang-says-china-s-military-unlikely-to-use-us-ai-chips-11752460408769.html
+2025-07-17 15:09:49,852 - INFO - Using enhanced LiveMint scraper
+2025-07-17 15:09:49,884 - INFO - Success with selector: div[class*="story"]
+2025-07-17 15:09:51,060 - INFO - [4/5] Processing: https://www.livemint.com/market/stock-market-news/nvidia-google-tesla-shares-among-top-us-stocks-bought-by-indian-investors-in-q1fy26-11752729740100.html
+2025-07-17 15:09:51,141 - INFO - Using enhanced LiveMint scraper
+2025-07-17 15:09:51,177 - INFO - Success with selector: div[id*="article"]
+2025-07-17 15:09:53,753 - INFO - [5/5] Processing: https://timesofindia.indiatimes.com/technology/tech-news/us-senators-send-warning-letter-to-nvidia-ceo-jensen-huang-we-are-worried-that/articleshow/122406004.cms
+2025-07-17 15:09:53,860 - INFO - Using Times of India scraper
+2025-07-17 15:09:55,233 - INFO - Saved 3 articles to scraped_news\LiveMint.json
+2025-07-17 15:09:55,235 - INFO - ✅ Done scraping all URLs.
