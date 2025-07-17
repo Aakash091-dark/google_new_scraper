@@ -534,7 +534,7 @@ def main():
     for source, articles in grouped_articles.items():
         save_to_json(articles, source, OUTPUT_FOLDER)
 
-    logger.info("✅ Done scraping all URLs.")
+    logger.info(" Done scraping all URLs.")
 
 
 if __name__ == "__main__":

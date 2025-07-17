@@ -5,15 +5,16 @@ import time
 import json
 from typing import Optional
 from urllib.parse import urlparse
-from datetime import datetime
+from datetime import datetime, timedelta
 import re
+import datefinder
 
-# ─── Hard-coded credentials ────────────────────────────────────────────────────
+
+# Hardcoded credentials
 project_id = "855529056135"
 location = "global"
 engine_id = "news-scraper_1752663065679"
 api_key = "AIzaSyDWp934QAIP3PJeEL3tw4LeLSxheI-kbpg"
-# ────────────────────────────────────────────────────────────────────────────────
 
 MAX_RETRIES = 5
 RETRY_DELAY = 5  # seconds
@@ -30,10 +31,6 @@ def search(
     if not all([project_id, location, engine_id, api_key, search_query]):
         print("Error: Missing required parameters for search")
         return None
-
-    print(
-        f"Attempting search with query: '{search_query}' and page token: '{page_token}'"
-    )
 
     retry_count = 0
     while retry_count <= MAX_RETRIES:
@@ -58,118 +55,158 @@ def search(
                 page_size=25,
                 page_token=page_token,
             )
-
-            print("Sending search request to Discovery Engine API")
             response = client.search_lite(request)
-            print(f"Search successful, received {len(response.results)} results")
             return response
 
         except Exception as e:
             retry_count += 1
-            print(f"Error during search (attempt {retry_count}/{MAX_RETRIES}): {e}")
             if retry_count <= MAX_RETRIES:
-                print(f"Retrying in {RETRY_DELAY} seconds…")
                 time.sleep(RETRY_DELAY)
             else:
-                print(f"Max retries reached. Giving up.")
+                print(f"Max retries reached: {e}")
                 return None
 
 
 def parse_date(date_string):
-    """Parse various date formats and return a standardized format."""
     if not date_string:
         return None
 
-    # Common date formats to try
-    date_formats = [
-        "%Y-%m-%dT%H:%M:%S.%fZ",  # ISO format with microseconds
-        "%Y-%m-%dT%H:%M:%SZ",  # ISO format
-        "%Y-%m-%dT%H:%M:%S",  # ISO format without Z
-        "%Y-%m-%d %H:%M:%S",  # Standard datetime
-        "%Y-%m-%d",  # Standard date
-        "%d/%m/%Y",  # DD/MM/YYYY
-        "%m/%d/%Y",  # MM/DD/YYYY
-        "%d-%m-%Y",  # DD-MM-YYYY
-        "%m-%d-%Y",  # MM-DD-YYYY
-        "%B %d, %Y",  # Month DD, YYYY
-        "%d %B %Y",  # DD Month YYYY
-        "%b %d, %Y",  # Mon DD, YYYY
-        "%d %b %Y",  # DD Mon YYYY
-        "%Y/%m/%d",  # YYYY/MM/DD
-        "%d.%m.%Y",  # DD.MM.YYYY
-        "%m.%d.%Y",  # MM.DD.YYYY
-        "%Y.%m.%d",  # YYYY.MM.DD
+    date_string = date_string.strip().lower()
+
+    # Handle relative times
+    relative_patterns = [
+        (
+            r"(\d+)\s*minute[s]?\s*ago",
+            lambda m: datetime.now() - timedelta(minutes=int(m.group(1))),
+        ),
+        (
+            r"(\d+)\s*hour[s]?\s*ago",
+            lambda m: datetime.now() - timedelta(hours=int(m.group(1))),
+        ),
+        (
+            r"(\d+)\s*day[s]?\s*ago",
+            lambda m: datetime.now() - timedelta(days=int(m.group(1))),
+        ),
+        (r"yesterday", lambda m: datetime.now() - timedelta(days=1)),
+        (r"just now", lambda m: datetime.now()),
+        (r"a day ago", lambda m: datetime.now() - timedelta(days=1)),
+        (r"an hour ago", lambda m: datetime.now() - timedelta(hours=1)),
+        (r"a minute ago", lambda m: datetime.now() - timedelta(minutes=1)),
     ]
 
-    # Try to parse with different formats
+    for pattern, func in relative_patterns:
+        match = re.search(pattern, date_string)
+        if match:
+            parsed_date = func(match)
+            return parsed_date.strftime("%Y-%m-%d %H:%M:%S")
+
+    # Try common datetime formats
+    date_formats = [
+        "%Y-%m-%dT%H:%M:%S.%fZ",
+        "%Y-%m-%dT%H:%M:%SZ",
+        "%Y-%m-%dT%H:%M:%S",
+        "%Y-%m-%d %H:%M:%S",
+        "%Y-%m-%d",
+        "%d/%m/%Y",
+        "%m/%d/%Y",
+        "%d-%m-%Y",
+        "%m-%d-%Y",
+        "%B %d, %Y",
+        "%d %B %Y",
+        "%b %d, %Y",
+        "%d %b %Y",
+        "%Y/%m/%d",
+    ]
+
     for fmt in date_formats:
         try:
-            parsed_date = datetime.strptime(date_string.strip(), fmt)
-            return {
-                "original": date_string,
-                "formatted": parsed_date.strftime("%Y-%m-%d %H:%M:%S"),
-                "iso": parsed_date.isoformat(),
-                "timestamp": int(parsed_date.timestamp()),
-            }
-        except ValueError:
+            parsed_date = datetime.strptime(date_string, fmt)
+            return parsed_date.strftime("%Y-%m-%d %H:%M:%S")
+        except Exception:
             continue
 
-    # If no format matches, try regex patterns for partial matches
-    patterns = [
-        r"(\d{4})-(\d{2})-(\d{2})",  # YYYY-MM-DD
-        r"(\d{2})/(\d{2})/(\d{4})",  # DD/MM/YYYY or MM/DD/YYYY
-        r"(\d{2})-(\d{2})-(\d{4})",  # DD-MM-YYYY or MM-DD-YYYY
+    # Try to find date in string with regex
+    regex_patterns = [
+        r"(\d{4})[-/](\d{1,2})[-/](\d{1,2})",
+        r"(\d{1,2})[-/](\d{1,2})[-/](\d{4})",
+        r"(\d{8})",  # YYYYMMDD
     ]
-
-    for pattern in patterns:
+    for pattern in regex_patterns:
         match = re.search(pattern, date_string)
         if match:
             try:
-                if pattern == r"(\d{4})-(\d{2})-(\d{2})":
-                    year, month, day = match.groups()
+                if len(match.group(0)) == 8:
+                    # YYYYMMDD format
+                    parsed_date = datetime.strptime(match.group(0), "%Y%m%d")
+                elif pattern == r"(\d{4})[-/](\d{1,2})[-/](\d{1,2})":
+                    year, month, day = map(int, match.groups())
+                    parsed_date = datetime(year, month, day)
                 else:
-                    part1, part2, year = match.groups()
-                    # Assume DD/MM format for ambiguous cases
-                    day, month = part1, part2
-
-                parsed_date = datetime(int(year), int(month), int(day))
-                return {
-                    "original": date_string,
-                    "formatted": parsed_date.strftime("%Y-%m-%d %H:%M:%S"),
-                    "iso": parsed_date.isoformat(),
-                    "timestamp": int(parsed_date.timestamp()),
-                }
-            except (ValueError, TypeError):
+                    day, month, year = map(int, match.groups())
+                    parsed_date = datetime(year, month, day)
+                return parsed_date.strftime("%Y-%m-%d %H:%M:%S")
+            except Exception:
                 continue
 
-    # If all parsing fails, return original with metadata
-    return {
-        "original": date_string,
-        "formatted": None,
-        "iso": None,
-        "timestamp": None,
-        "parse_error": True,
-    }
+    return None
+
+
+def parse_date_from_url(url):
+    if not url:
+        return None
+
+    # Extract date patterns from URL
+    url_date_patterns = [
+        r"/(\d{4})/(\d{2})/(\d{2})/",  # /YYYY/MM/DD/
+        r"/(\d{4})-(\d{2})-(\d{2})/",  # /YYYY-MM-DD/
+        r"/(\d{8})/",  # /YYYYMMDD/
+        r"(\d{4})(\d{2})(\d{2})",  # YYYYMMDD anywhere
+    ]
+
+    for pattern in url_date_patterns:
+        match = re.search(pattern, url)
+        if match:
+            try:
+                if len(match.group(0)) == 8 or len(match.groups()) == 3:
+                    if len(match.group(0)) == 8:
+                        parsed_date = datetime.strptime(match.group(0), "%Y%m%d")
+                    else:
+                        year, month, day = map(int, match.groups())
+                        parsed_date = datetime(year, month, day)
+                    return parsed_date.strftime("%Y-%m-%d %H:%M:%S")
+            except Exception:
+                continue
+
+    # Fallback to datefinder
+    matches = list(datefinder.find_dates(url))
+    if matches:
+        return matches[0].strftime("%Y-%m-%d %H:%M:%S")
+
+    return None
+
+
+def extract_date_from_text(text):
+    """Try to extract date from arbitrary text (like description or title)."""
+    if not text:
+        return None
+    matches = list(datefinder.find_dates(text))
+    if matches:
+        return matches[0].strftime("%Y-%m-%d %H:%M:%S")
+    return None
 
 
 def save_to_json(data, filename="search_results.json"):
-    """Save the search results to a JSON file with proper formatting."""
     try:
         with open(filename, "w", encoding="utf-8") as f:
             json.dump(data, f, indent=4, ensure_ascii=False, sort_keys=True)
         print(f"Results saved to {filename}")
     except Exception as e:
-        print(f"Error saving to JSON: {e}")
+        print(f"Error saving JSON: {e}")
 
 
 def main(total_results_needed: int, keyword: str):
-    search_query = (
-        keyword  # Changed: Use keyword directly instead of appending "Warehouse"
-    )
-    print(f"Generated search query: {search_query}")
-
+    search_query = keyword
     aggregated_results = []
-    pages_metadata = []
     current_page_token = ""
     pagination_attempt = 0
     max_pagination_attempts = 10
@@ -179,23 +216,11 @@ def main(total_results_needed: int, keyword: str):
         and pagination_attempt < max_pagination_attempts
     ):
         pagination_attempt += 1
-        print(
-            f"Pagination attempt {pagination_attempt} with token '{current_page_token}'"
-        )
-
         response = search(
             project_id, location, engine_id, api_key, search_query, current_page_token
         )
-        if response is None:
+        if not response:
             break
-
-        pages_metadata.append(
-            {
-                "page_token_used": current_page_token,
-                "results_in_page": len(response.results),
-            }
-        )
-        print(f"Received {len(response.results)} results")
 
         for result in response.results:
             data = result.document.derived_struct_data
@@ -207,19 +232,29 @@ def main(total_results_needed: int, keyword: str):
                 "url": None,
             }
 
-            # Extract URL from the document - prioritize actual web URLs
-            if "link" in data:
-                meta["url"] = data["link"]
-            elif "url" in data:
-                meta["url"] = data["url"]
+            # Basic URL
+            meta["url"] = data.get("link") or data.get("url") or None
 
+            # --- Title/Description extraction ---
+            meta["title"] = data.get("title")
+            meta["description"] = data.get("description")
+
+            # --- Try pagemap/metatags ---
             if "pagemap" in data:
                 pagemap = data["pagemap"]
                 if metatags := pagemap.get("metatags"):
                     tags = metatags[0]
+                    meta["title"] = (
+                        meta["title"] or tags.get("og:title") or tags.get("title")
+                    )
+                    meta["description"] = (
+                        meta["description"]
+                        or tags.get("og:description")
+                        or tags.get("twitter:description")
+                    )
+                    meta["source"] = tags.get("og:site_name") or meta["source"]
 
-                    # Try multiple date fields
-                    date_published = None
+                    # Try all date fields in metatags
                     date_fields = [
                         "article:published_time",
                         "datePublished",
@@ -237,127 +272,109 @@ def main(total_results_needed: int, keyword: str):
                         "parsely-pub-date",
                         "timestamp",
                     ]
-
                     for field in date_fields:
                         if tags.get(field):
-                            date_published = tags[field]
+                            meta["date_published"] = tags[field]
                             break
 
-                    meta.update(
-                        {
-                            "title": tags.get("og:title") or tags.get("title"),
-                            "description": tags.get("og:description")
-                            or tags.get("twitter:description"),
-                            "date_published": date_published,
-                            "source": tags.get("og:site_name"),
-                        }
-                    )
-
-                    # Try to get URL from metatags - prioritize actual web URLs
                     if not meta["url"]:
                         meta["url"] = (
                             tags.get("og:url")
                             or tags.get("canonical")
                             or tags.get("twitter:url")
-                            or tags.get("url")
+                            or None
                         )
-
-                    if not meta["source"] and tags.get("og:url"):
+                    if not meta["source"] and meta["url"]:
                         try:
-                            meta["source"] = urlparse(tags["og:url"]).netloc
-                        except:
+                            meta["source"] = urlparse(meta["url"]).netloc
+                        except Exception:
                             pass
 
-                # Also check for JSON-LD structured data
+                # --- Try JSON-LD ---
                 if "jsonld" in pagemap:
-                    jsonld_data = pagemap["jsonld"]
-                    for item in jsonld_data:
+                    for item in pagemap["jsonld"]:
                         if isinstance(item, dict):
-                            if not meta["date_published"] and item.get("datePublished"):
-                                meta["date_published"] = item["datePublished"]
-                            elif not meta["date_published"] and item.get(
-                                "publishedDate"
-                            ):
-                                meta["date_published"] = item["publishedDate"]
-                            elif not meta["date_published"] and item.get("dateCreated"):
-                                meta["date_published"] = item["dateCreated"]
+                            if not meta["date_published"]:
+                                meta["date_published"] = (
+                                    item.get("datePublished")
+                                    or item.get("publishedDate")
+                                    or item.get("dateCreated")
+                                )
+                            if not meta["url"]:
+                                meta["url"] = item.get("url") or item.get("@id")
 
-                            # Try to get URL from JSON-LD - prioritize actual web URLs
-                            if not meta["url"] and item.get("url"):
-                                meta["url"] = item["url"]
-                            elif (
-                                not meta["url"]
-                                and item.get("@id")
-                                and item.get("@id").startswith("http")
-                            ):
-                                meta["url"] = item["@id"]
-
-                # Check in the main document data for additional date fields
-                if not meta["date_published"]:
-                    main_data_date_fields = [
-                        "datePublished",
-                        "publishedDate",
-                        "date",
-                        "created",
-                        "modified",
-                    ]
-                    for field in main_data_date_fields:
-                        if data.get(field):
-                            meta["date_published"] = data[field]
-                            break
-
-            # Final fallback for URL extraction from various data sources
-            if not meta["url"]:
-                url_fields = ["link", "url", "href", "webpage"]
-                for field in url_fields:
-                    if (
-                        data.get(field)
-                        and isinstance(data[field], str)
-                        and data[field].startswith("http")
-                    ):
-                        meta["url"] = data[field]
+            # --- Try main data fields for date ---
+            if not meta["date_published"]:
+                for fallback_field in [
+                    "datePublished",
+                    "publishedDate",
+                    "date",
+                    "created",
+                    "modified",
+                ]:
+                    if data.get(fallback_field):
+                        meta["date_published"] = data[fallback_field]
                         break
 
-            # Additional fallback: check if document ID is actually a URL
-            if (
-                not meta["url"]
-                and hasattr(result.document, "id")
-                and result.document.id
-            ):
+            # --- Try to parse date from all possible sources ---
+            parsed_date = None
+            # 1. Try direct date field
+            if meta["date_published"]:
+                parsed_date = parse_date(str(meta["date_published"]))
+            # 2. Try from URL
+            if not parsed_date and meta["url"]:
+                parsed_date = parse_date_from_url(meta["url"])
+            # 3. Try from description
+            if not parsed_date and meta.get("description"):
+                parsed_date = extract_date_from_text(meta["description"])
+            # 4. Try from title
+            if not parsed_date and meta.get("title"):
+                parsed_date = extract_date_from_text(meta["title"])
+            # 5. Fallback: Use today's date if still not found
+            if not parsed_date:
+                parsed_date = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+            meta["date_published"] = parsed_date
+
+            # --- Fallback for URL ---
+            if not meta["url"]:
+                for possible_url_field in ["link", "url", "href", "webpage"]:
+                    val = data.get(possible_url_field)
+                    if val and isinstance(val, str) and val.startswith("http"):
+                        meta["url"] = val
+                        break
+            if not meta["url"] and getattr(result.document, "id", None):
                 if result.document.id.startswith("http"):
                     meta["url"] = result.document.id
 
-            if any(meta.values()):
+            if any(v for v in meta.values()):
                 aggregated_results.append(meta)
 
             if len(aggregated_results) >= total_results_needed:
                 break
 
-        if getattr(response, "next_page_token", ""):
-            current_page_token = response.next_page_token
-        else:
+        # Pagination token update
+        current_page_token = getattr(response, "next_page_token", "")
+        if not current_page_token:
             break
 
     if not aggregated_results:
         return None
 
-    titles = [r["title"] for r in aggregated_results if r.get("title")]
+    # Prepare summary counts
+    titles = [r.get("title") for r in aggregated_results if r.get("title")]
     descriptions = [
-        r["description"] for r in aggregated_results if r.get("description")
+        r.get("description") for r in aggregated_results if r.get("description")
     ]
-    dates = [r["date_published"] for r in aggregated_results if r.get("date_published")]
-    sources = [r["source"] for r in aggregated_results if r.get("source")]
-    urls = [r["url"] for r in aggregated_results if r.get("url")]
+    dates = [
+        r.get("date_published") for r in aggregated_results if r.get("date_published")
+    ]
+    sources = [r.get("source") for r in aggregated_results if r.get("source")]
+    urls = [r.get("url") for r in aggregated_results if r.get("url")]
 
-    print(
-        f"Search completed: {len(aggregated_results)} results over {len(pages_metadata)} pages"
-    )
-    # Create structured results for JSON output
     structured_results = []
-    max_length = (
-        max(len(titles), len(descriptions), len(dates), len(sources), len(urls))
-        if any([titles, descriptions, dates, sources, urls])
-        else 0
+    max_length = max(
+        len(titles), len(descriptions), len(dates), len(sources), len(urls)
     )
 
     for i in range(max_length):
@@ -383,79 +400,24 @@ def main(total_results_needed: int, keyword: str):
     }
 
 
-"""
-def save_news_by_source(news_items, folder="scraped_news"):
-    os.makedirs(folder, exist_ok=True)
-
-    for item in news_items:
-        source = item.get("source") or "unknown_source"
-        # Sanitize filename
-        filename = os.path.join(
-            folder, f"{source.replace(' ', '_').replace('.', '')}.json"
-        )
-
-        news_entry = {
-            "title": item.get("title"),
-            "description": item.get("description"),
-            "date_published": item.get("date_published"),
-            "url": item.get("url"),
-        }
-
-        existing_news = []
-
-        if os.path.exists(filename):
-            with open(filename, "r", encoding="utf-8") as f:
-                try:
-                    existing_news = json.load(f)
-                except json.JSONDecodeError:
-                    pass
-
-        # Prevent duplicates based on URL or Title
-        is_duplicate = any(
-            n.get("url") == news_entry["url"] or n.get("title") == news_entry["title"]
-            for n in existing_news
-        )
-
-        if not is_duplicate:
-            existing_news.append(news_entry)
-            with open(filename, "w", encoding="utf-8") as f:
-                json.dump(existing_news, f, indent=4, ensure_ascii=False)
-            print(f"✅ Added news to {filename}")
-        else:
-            print(f"⚠️ Duplicate news skipped in {filename}")
-"""
-
 if __name__ == "__main__":
-    # Get user input
     try:
         total_results = int(input("Enter the number of results needed: "))
-        keyword = input("Enter the search keyword: ")  # Changed: Updated input prompt
-    except ValueError:
-        print("Invalid input for number of results. Using default value of 2.")
+    except Exception:
         total_results = 2
-        keyword = input("Enter the search keyword: ")  # Changed: Updated input prompt
+    keyword = input("Enter the search keyword: ")
 
-    final_result = main(
-        total_results, keyword
-    )  # Changed: Pass keyword instead of domain
-
-    print("\nFinal Results:")
+    final_result = main(total_results, keyword)
 
     if final_result:
-        # Save to JSON
         save_to_json(final_result)
 
-        # Save per source into separate files
-        # save_news_by_source(final_result["results"])
-
-        # Display results
-        results = final_result["results"]
-        for i, result in enumerate(results):
-            print(f"\n🔹 Result {i+1}")
-            print(f"   Title       : {result['title'] or 'N/A'}")
-            print(f"   Description : {result['description'] or 'N/A'}")
-            print(f"   Published   : {result['date_published'] or 'N/A'}")
-            print(f"   Source      : {result['source'] or 'N/A'}")
-            print(f"   URL         : {result['url'] or 'N/A'}")
+        for idx, item in enumerate(final_result["results"], start=1):
+            print(f"\nResult {idx}:")
+            print(f"Title       : {item.get('title') or 'N/A'}")
+            print(f"Description : {item.get('description') or 'N/A'}")
+            print(f"Published   : {item.get('date_published') or 'N/A'}")
+            print(f"Source      : {item.get('source') or 'N/A'}")
+            print(f"URL         : {item.get('url') or 'N/A'}")
     else:
         print("No results found.")

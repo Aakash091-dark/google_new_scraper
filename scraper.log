@@ -386,3 +386,17 @@
 2025-07-17 15:09:53,860 - INFO - Using Times of India scraper
 2025-07-17 15:09:55,233 - INFO - Saved 3 articles to scraped_news\LiveMint.json
 2025-07-17 15:09:55,235 - INFO - ✅ Done scraping all URLs.
+2025-07-17 15:38:46,729 - INFO - Reading URLs from search_results.json
+2025-07-17 15:38:46,730 - INFO - [1/4] Processing: https://www.livemint.com/technology/can-nvidia-persuade-governments-to-pay-for-sovereign-ai-11752590985477.html
+2025-07-17 15:38:47,028 - INFO - Using enhanced LiveMint scraper
+2025-07-17 15:38:47,066 - INFO - Success with selector: div[id*="article"]
+2025-07-17 15:38:49,551 - INFO - [2/4] Processing: https://timesofindia.indiatimes.com/technology/tech-news/nvidia-ceo-jensen-huang-calls-chinese-ai-models-world-class-including-the-one-banned-by-the-us-government/articleshow/122573397.cms
+2025-07-17 15:38:49,653 - INFO - Using Times of India scraper
+2025-07-17 15:38:50,735 - INFO - [3/4] Processing: https://www.livemint.com/news/world/nvidia-ceo-jensen-huang-says-china-s-military-unlikely-to-use-us-ai-chips-11752460408769.html
+2025-07-17 15:38:50,813 - INFO - Using enhanced LiveMint scraper
+2025-07-17 15:38:50,847 - INFO - Success with selector: div[class*="story"]
+2025-07-17 15:38:53,517 - INFO - [4/4] Processing: https://timesofindia.indiatimes.com/technology/tech-news/us-senators-send-warning-letter-to-nvidia-ceo-jensen-huang-we-are-worried-that/articleshow/122406004.cms
+2025-07-17 15:38:53,593 - INFO - Using Times of India scraper
+2025-07-17 15:38:55,721 - INFO - Saved 2 articles to scraped_news\LiveMint.json
+2025-07-17 15:38:55,723 - INFO - Saved 2 articles to scraped_news\Times_of_India.json
+2025-07-17 15:38:55,723 - INFO - ✅ Done scraping all URLs.

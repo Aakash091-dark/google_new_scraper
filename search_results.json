@@ -1,47 +1,82 @@
 {
     "results": [
         {
-            "date_published": "2025-07-14T08:16:05+05:30",
+            "date_published": "2025-07-17 15:47:45",
             "description": "Politicians are warming to the idea",
             "source": "The Economist",
             "title": "Can Nvidia persuade governments to pay for “sovereign” AI?",
             "url": "https://www.livemint.com/technology/can-nvidia-persuade-governments-to-pay-for-sovereign-ai-11752590985477.html"
         },
         {
-            "date_published": "2025-07-17T11:10:20+05:30",
+            "date_published": "2025-07-17 15:47:45",
             "description": "Tech News : Nvidia CEO Jensen Huang praised Chinese AI models as \"world class\" at a Beijing expo, highlighting their open-source approach and global impact. This",
             "source": "The Times of India",
-            "title": "Nvidia CEO Jensen Huang calls Chinese AI models “world class”, including the one ‘banned’ by the US government - The Times of India",
+            "title": "Nvidia CEO Jensen Huang calls Chinese AI models “world class ...",
             "url": "https://timesofindia.indiatimes.com/technology/tech-news/nvidia-ceo-jensen-huang-calls-chinese-ai-models-world-class-including-the-one-banned-by-the-us-government/articleshow/122573397.cms"
         },
         {
-            "date_published": null,
+            "date_published": "2025-07-14 00:00:00",
             "description": "Nvidia Corp. Chief Executive Officer Jensen Huang said the US government doesn’t need to be concerned that the Chinese military will use his company’s products to improve their capabilities.",
             "source": "mint",
-            "title": "Nvidia CEO Jensen Huang says China’s military unlikely to use US AI Chips: ‘They simply can’t rely’ | Today News",
+            "title": "Nvidia CEO Jensen Huang says China's military unlikely to use US ...",
             "url": "https://www.livemint.com/news/world/nvidia-ceo-jensen-huang-says-china-s-military-unlikely-to-use-us-ai-chips-11752460408769.html"
         },
         {
-            "date_published": null,
-            "description": "Indian retail investors ramped up US stock purchases amid global market volatility, with a strong tilt toward semiconductors, healthcare, AI, and small-cap ETFs. There was also a shift toward long-term, diversified global portfolios.",
-            "source": "mint",
-            "title": "Nvidia, Google, Tesla shares among top US stocks bought by Indian investors in Q1FY26 | Stock Market News",
-            "url": "https://www.livemint.com/market/stock-market-news/nvidia-google-tesla-shares-among-top-us-stocks-bought-by-indian-investors-in-q1fy26-11752729740100.html"
+            "date_published": "2025-03-17 00:00:00",
+            "description": "/PRNewswire/ -- To further support the demands of modern AI workloads, MinIO, the leader in AI data storage for the exascale data era, today at NVIDIA GTC...",
+            "source": "www.prnewswire.com",
+            "title": "MinIO Deepens Support for the NVIDIA AI Ecosystem - PR Newswire",
+            "url": "https://www.prnewswire.com/news-releases/minio-deepens-support-for-the-nvidia-ai-ecosystem-302402464.html"
         },
         {
-            "date_published": null,
-            "description": "Tech News : US senators cautioned Nvidia CEO Jensen Huang about his upcoming China trip. They urged him to avoid companies undermining US chip export controls. Co",
-            "source": "The Times of India",
-            "title": "US senators send ‘warning letter’ to Nvidia CEO Jensen Huang: ‘We are worried that…’ - The Times of India",
-            "url": "https://timesofindia.indiatimes.com/technology/tech-news/us-senators-send-warning-letter-to-nvidia-ceo-jensen-huang-we-are-worried-that/articleshow/122406004.cms"
+            "date_published": "2025-03-18 00:00:00",
+            "description": "/PRNewswire/ -- Nexar, a leader in AI-powered mobility solutions, today announced a collaboration with NVIDIA aimed at transforming the automotive landscape....",
+            "source": "www.prnewswire.com",
+            "title": "Nexar Teams with NVIDIA to Advance Autonomous Vehicle Innovation",
+            "url": "https://www.prnewswire.com/news-releases/nexar-teams-with-nvidia-to-advance-autonomous-vehicle-innovation-302403360.html"
+        },
+        {
+            "date_published": "2025-07-09 00:00:00",
+            "description": "/PRNewswire/ -- CoreWeave, Inc. (Nasdaq: CRWV) (\"CoreWeave\"), the AI Hyperscaler™, today announced it is the first cloud platform to make NVIDIA RTX PRO 6000...",
+            "source": "www.prnewswire.com",
+            "title": "CoreWeave Becomes the First AI Cloud Provider to Offer NVIDIA ...",
+            "url": "https://www.prnewswire.com/news-releases/coreweave-becomes-the-first-ai-cloud-provider-to-offer-nvidia-rtx-pro-6000-blackwell-gpu-at-scale-302500917.html"
+        },
+        {
+            "date_published": "2025-07-17 15:47:45",
+            "description": "Jim Cramer urges investors to hold Nvidia stock instead of trading, citing a remarkable 42,000% increase since his initial recommendation. With Nvidia's stock climbing to $166, find out why this AI chipmaker is capturing Wall Street's attention amidst a booming AI market.",
+            "source": "The Economic Times",
+            "title": "Nvidia stock outlook: Jim Cramer doubles down on Jensen Huang",
+            "url": "https://economictimes.indiatimes.com/news/international/us/jim-cramer-doubles-down-on-jensen-huang-own-nvidia-dont-trade-it-says-stocks-up-42000-since-his-pick-jim-cramer-news-nvidia-stock-news/articleshow/122440495.cms"
+        },
+        {
+            "date_published": "2025-07-03 00:00:00",
+            "description": "Explore how Nvidia's valuation of $3.5 trillion translates to over $90 million per employee, and what this means for the future of workforce dynamics in tech amid the AI gold rush.",
+            "source": "The Economic Times",
+            "title": "You won't believe how much each Nvidia employee is worth as the ...",
+            "url": "https://economictimes.indiatimes.com/news/international/us/you-wont-believe-how-much-each-nvidia-employee-is-worth-as-the-company-rides-the-ai-gold-rush-ai-news-nvidia-news/articleshow/121678822.cms"
+        },
+        {
+            "date_published": "2025-07-17 15:47:45",
+            "description": "Nvidia NVDA stock price today, July 10, continues to draw strong investor attention as shares extend their rally amid booming demand for AI chips and tech optimism. With NVDA showing sharp intraday moves and trading volume surging, market watchers are closely tracking its performance. The stock remains one of the most influential in the AI sector, making its daily movement highly relevant for traders and long-term investors.",
+            "source": "The Economic Times",
+            "title": "Nvidia stock price today: NVDA shares rally near peak as AI chip ...",
+            "url": "https://economictimes.indiatimes.com/news/international/us/nvidia-nvda-stock-price-today-july-10-stock-performance-trading-movement/articleshow/122366357.cms"
+        },
+        {
+            "date_published": "2025-07-23 00:00:00",
+            "description": "Nvidia’s shares fell 6.5 per cent in premarket trading. Rival chipmaker AMD's shares dropped 6.8 per cent.",
+            "source": "The Economic Times",
+            "title": "Nvidia share price crashes today: Why have AI giant stocks fallen on ...",
+            "url": "https://economictimes.indiatimes.com/news/international/us/nvidia-share-price-crashes-today-why-have-ai-giant-stocks-fallen-on-wednesday/articleshow/120349510.cms?UTM_Source=Google_Newsstand&UTM_Campaign=RSS_Feed&UTM_Medium=Referral"
         }
     ],
     "summary": {
-        "dates_count": 2,
-        "descriptions_count": 5,
-        "sources_count": 5,
-        "titles_count": 5,
-        "total_results": 5,
-        "urls_count": 5
+        "dates_count": 10,
+        "descriptions_count": 10,
+        "sources_count": 10,
+        "titles_count": 10,
+        "total_results": 10,
+        "urls_count": 10
     }
 }
