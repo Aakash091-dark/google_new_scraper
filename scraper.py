@@ -381,6 +381,47 @@ def main(total_results_needed: int, domain: str):
     }
 
 
+def save_news_by_source(news_items, folder="scraped_news"):
+    os.makedirs(folder, exist_ok=True)
+
+    for item in news_items:
+        source = item.get("source") or "unknown_source"
+        # Sanitize filename
+        filename = os.path.join(
+            folder, f"{source.replace(' ', '_').replace('.', '')}.json"
+        )
+
+        news_entry = {
+            "title": item.get("title"),
+            "description": item.get("description"),
+            "date_published": item.get("date_published"),
+            "url": item.get("url"),
+        }
+
+        existing_news = []
+
+        if os.path.exists(filename):
+            with open(filename, "r", encoding="utf-8") as f:
+                try:
+                    existing_news = json.load(f)
+                except json.JSONDecodeError:
+                    pass
+
+        # Prevent duplicates based on URL or Title
+        is_duplicate = any(
+            n.get("url") == news_entry["url"] or n.get("title") == news_entry["title"]
+            for n in existing_news
+        )
+
+        if not is_duplicate:
+            existing_news.append(news_entry)
+            with open(filename, "w", encoding="utf-8") as f:
+                json.dump(existing_news, f, indent=4, ensure_ascii=False)
+            print(f"✅ Added news to {filename}")
+        else:
+            print(f"⚠️ Duplicate news skipped in {filename}")
+
+
 if __name__ == "__main__":
     # Get user input
     try:
@@ -393,14 +434,19 @@ if __name__ == "__main__":
 
     final_result = main(total_results, domain)
 
-    print("\n Final Results:")
+    print("\nFinal Results:")
+
     if final_result:
         # Save to JSON
         save_to_json(final_result)
 
+        # Save per source into separate files
+        save_news_by_source(final_result["results"])
+
+        # Display results
         results = final_result["results"]
         for i, result in enumerate(results):
-            print(f"\n🔹 Result {i}")
+            print(f"\n🔹 Result {i+1}")
             print(f"   Title       : {result['title'] or 'N/A'}")
             print(f"   Description : {result['description'] or 'N/A'}")
             print(f"   Published   : {result['date_published'] or 'N/A'}")
