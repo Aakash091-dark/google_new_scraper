@@ -283,12 +283,12 @@ def test_livemint_urls():
         print(f"Content length: {len(result['content'])}")
         print(f"Content preview: {result['content'][:200]}...")
         print("-" * 80)
-        time.sleep(2)  # Be respectful to the server
+        time.sleep(2)
 
     return results
 
 
-# Updated scraper functions (keeping your existing ones)
+# Updated scraper functions
 def scrape_pr_newswire(soup):
     logger.info("Using PR Newswire scraper")
     selectors = [
@@ -538,7 +538,5 @@ def main():
 
 
 if __name__ == "__main__":
-    # Uncomment the line below to test the problematic URLs
-    # test_livemint_urls()
 
     main()
