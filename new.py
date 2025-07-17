@@ -288,22 +288,47 @@ def test_livemint_urls():
     return results
 
 
-# Updated scraper functions
+def get_page_content(url: str) -> Optional[BeautifulSoup]:
+    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
+    try:
+        resp = session.get(url, headers=headers, timeout=TIMEOUT)
+        resp.raise_for_status()
+        if "text/html" not in resp.headers.get("content-type", ""):
+            return None
+        return BeautifulSoup(resp.content, "html.parser")
+    except Exception as e:
+        logger.error(f"Fetching {url} failed: {e}")
+        return None
+
+
 def scrape_pr_newswire(soup):
-    logger.info("Using PR Newswire scraper")
+    logger.info("Using updated PR Newswire scraper")
     selectors = [
-        "div.release-body",
-        "div#main-content",
-        "div#newsContent",
-        "div.content",
+        "div.content-release",  # common main wrapper
+        "div.release-body",  # classic format
+        "div#main-content",  # fallback
+        "div#newsContent",  # older version
+        "article",  # just in case
     ]
-    for selector in selectors:
-        content = soup.select_one(selector)
-        if content:
-            text = clean_text(content.get_text())
+    for sel in selectors:
+        el = soup.select_one(sel)
+        if el:
+            text = clean_text(el.get_text())
             text = remove_footer_lines(text)
             if len(text) > CONTENT_MIN_LENGTH:
+                logger.info(f"Extracted with selector: {sel}")
                 return text
+
+    # Fallback: gather all paragraphs under release-body
+    paragraphs = soup.select("div.release-body p")
+    if paragraphs:
+        combined = " ".join(p.get_text(strip=True) for p in paragraphs)
+        text = clean_text(combined)
+        if len(text) > CONTENT_MIN_LENGTH:
+            logger.info("Extracted via paragraph fallback")
+            return text
+
+    logger.warning("PR Newswire scraper failed to extract meaningful content")
     return "Content not found"
 
 
@@ -438,6 +463,114 @@ def scrape_indian_express(soup):
     return "Content not found"
 
 
+def scrape_news18(soup):
+    logger.info("Using News18 scraper")
+    selectors = ["div.article_container", "div#article_body", "div.storyContent"]
+    for selector in selectors:
+        content = soup.select_one(selector)
+        if content:
+            text = clean_text(content.get_text())
+            text = remove_footer_lines(text)
+            if len(text) > CONTENT_MIN_LENGTH:
+                return text
+    return "Content not found"
+
+
+def scrape_business_standard(soup):
+    logger.info("Using Business Standard scraper")
+    selectors = ["div.storyContent", "div#story-content", "div.article-content"]
+    for selector in selectors:
+        content = soup.select_one(selector)
+        if content:
+            text = clean_text(content.get_text())
+            text = remove_footer_lines(text)
+            if len(text) > CONTENT_MIN_LENGTH:
+                return text
+    return "Content not found"
+
+
+def scrape_deccan_herald(soup):
+    logger.info("Using Deccan Herald scraper")
+    selectors = ["div.article-main", "div.field-items", "div.article-content"]
+    for selector in selectors:
+        content = soup.select_one(selector)
+        if content:
+            text = clean_text(content.get_text())
+            text = remove_footer_lines(text)
+            if len(text) > CONTENT_MIN_LENGTH:
+                return text
+    return "Content not found"
+
+
+def scrape_firstpost(soup):
+    logger.info("Using Firstpost scraper")
+    selectors = ["div.text-copy", "div.article-full-content", "div.main-article"]
+    for selector in selectors:
+        content = soup.select_one(selector)
+        if content:
+            text = clean_text(content.get_text())
+            text = remove_footer_lines(text)
+            if len(text) > CONTENT_MIN_LENGTH:
+                return text
+    return "Content not found"
+
+
+def scrape_the_print(soup):
+    logger.info("Using The Print scraper")
+    selectors = [
+        "div.tdb_single_post_content",
+        "div.content-wrap",
+        "div.td-post-content",
+    ]
+    for selector in selectors:
+        content = soup.select_one(selector)
+        if content:
+            text = clean_text(content.get_text())
+            text = remove_footer_lines(text)
+            if len(text) > CONTENT_MIN_LENGTH:
+                return text
+    return "Content not found"
+
+
+def scrape_the_wire(soup):
+    logger.info("Using The Wire scraper")
+    selectors = ["div.article-content", "div#article_content", "div.td-post-content"]
+    for selector in selectors:
+        content = soup.select_one(selector)
+        if content:
+            text = clean_text(content.get_text())
+            text = remove_footer_lines(text)
+            if len(text) > CONTENT_MIN_LENGTH:
+                return text
+    return "Content not found"
+
+
+def scrape_moneycontrol(soup):
+    logger.info("Using Moneycontrol scraper")
+    selectors = ["div#article-main", "div.content_wrapper", "div#story-main"]
+    for selector in selectors:
+        content = soup.select_one(selector)
+        if content:
+            text = clean_text(content.get_text())
+            text = remove_footer_lines(text)
+            if len(text) > CONTENT_MIN_LENGTH:
+                return text
+    return "Content not found"
+
+
+def scrape_free_press_journal(soup):
+    logger.info("Using Free Press Journal scraper")
+    selectors = ["div.article-detail", "div#story-content", "div.main-article-content"]
+    for selector in selectors:
+        content = soup.select_one(selector)
+        if content:
+            text = clean_text(content.get_text())
+            text = remove_footer_lines(text)
+            if len(text) > CONTENT_MIN_LENGTH:
+                return text
+    return "Content not found"
+
+
 def scrape_generic(soup):
     logger.info("Using generic scraper")
     paragraphs = soup.find_all("p")
@@ -462,6 +595,14 @@ def get_scraper_for_source(source: str):
         "Times of India": scrape_times_of_india,
         "ET Now": scrape_et_now,
         "Indian Express": scrape_indian_express,
+        "News18": scrape_news18,
+        "Business Standard": scrape_business_standard,
+        "Deccan Herald": scrape_deccan_herald,
+        "Firstpost": scrape_firstpost,
+        "The Print": scrape_the_print,
+        "The Wire": scrape_the_wire,
+        "Moneycontrol": scrape_moneycontrol,
+        "Free Press Journal": scrape_free_press_journal,
     }
     return scrapers.get(source, scrape_generic)
 
@@ -509,6 +650,14 @@ def infer_source_name(url: str) -> str:
         "timesofindia.indiatimes.com": "Times of India",
         "etnownews.com": "ET Now",
         "indianexpress.com": "Indian Express",
+        "news18.com": "News18",
+        "business-standard.com": "Business Standard",
+        "deccanherald.com": "Deccan Herald",
+        "firstpost.com": "Firstpost",
+        "theprint.in": "The Print",
+        "thewire.in": "The Wire",
+        "moneycontrol.com": "Moneycontrol",
+        "freepressjournal.in": "Free Press Journal",
     }
     return mapping.get(domain, domain.replace(".", "_"))
 
