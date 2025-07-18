@@ -523,3 +523,183 @@
 2025-07-17 17:12:58,549 - INFO - Saved 3 articles to scraped_news\Hindustan_Times.json
 2025-07-17 17:12:58,551 - INFO - Saved 2 articles to scraped_news\PR_Newswire.json
 2025-07-17 17:12:58,552 - INFO -  Done scraping all URLs.
+2025-07-18 10:41:29,443 - INFO - Reading URLs from search_results.json
+2025-07-18 10:41:29,445 - INFO - [1/10] Processing: https://www.livemint.com/technology/gadgets/10-best-laptops-for-working-professionals-to-handle-multitasking-with-ease-top-picks-that-are-light-fast-and-efficient-11750329782800.html
+2025-07-18 10:41:41,275 - INFO - Reading URLs from search_results.json
+2025-07-18 10:41:41,276 - INFO - [1/10] Processing: https://www.livemint.com/technology/gadgets/10-best-laptops-for-working-professionals-to-handle-multitasking-with-ease-top-picks-that-are-light-fast-and-efficient-11750329782800.html
+2025-07-18 10:42:09,542 - INFO - Reading URLs from search_results.json
+2025-07-18 10:42:09,543 - INFO - [1/10] Processing: https://www.livemint.com/technology/gadgets/10-best-laptops-for-working-professionals-to-handle-multitasking-with-ease-top-picks-that-are-light-fast-and-efficient-11750329782800.html
+2025-07-18 10:42:09,894 - INFO - Using enhanced LiveMint scraper
+2025-07-18 10:42:09,960 - INFO - Success with selector: div[id*="article"]
+2025-07-18 10:42:11,177 - INFO - [2/10] Processing: https://www.hindustantimes.com/technology/10-best-laptops-for-working-professional-that-offers-power-and-productivity-top-picks-for-doing-everyday-work-with-ease-101750669527768.html
+2025-07-18 10:42:11,587 - INFO - Using Hindustan Times scraper
+2025-07-18 10:42:12,881 - INFO - [3/10] Processing: https://www.hindustantimes.com/technology/top-10-laptops-under-50-000-with-latest-processors-ssd-storage-and-battery-life-101752658234504.html
+2025-07-18 10:42:12,983 - INFO - Using Hindustan Times scraper
+2025-07-18 10:42:58,293 - INFO - Reading URLs from search_results.json
+2025-07-18 10:42:58,293 - INFO - Found 10 URLs to process
+2025-07-18 10:42:58,294 - INFO - [1/10] Processing: https://www.livemint.com/technology/gadgets/10-best-laptops-for-working-professionals-to-handle-multitasking-with-ease-top-picks-that-are-light-fast-and-efficient-11750329782800.html
+2025-07-18 10:42:58,487 - INFO - Using LiveMint scraper
+2025-07-18 10:42:58,553 - INFO - Success with selector: div[id*="article"]
+2025-07-18 10:42:58,554 - INFO - Successfully scraped 407 characters
+2025-07-18 10:43:00,066 - INFO - [2/10] Processing: https://www.hindustantimes.com/technology/10-best-laptops-for-working-professional-that-offers-power-and-productivity-top-picks-for-doing-everyday-work-with-ease-101750669527768.html
+2025-07-18 10:43:00,238 - INFO - Using Hindustan Times scraper
+2025-07-18 10:43:00,296 - WARNING - Failed to scrape meaningful content from https://www.hindustantimes.com/technology/10-best-laptops-for-working-professional-that-offers-power-and-productivity-top-picks-for-doing-everyday-work-with-ease-101750669527768.html
+2025-07-18 10:43:02,676 - INFO - [3/10] Processing: https://www.hindustantimes.com/technology/top-10-laptops-under-50-000-with-latest-processors-ssd-storage-and-battery-life-101752658234504.html
+2025-07-18 10:43:02,712 - ERROR - Error fetching https://www.hindustantimes.com/technology/top-10-laptops-under-50-000-with-latest-processors-ssd-storage-and-battery-life-101752658234504.html: 403 Client Error: Forbidden for url: https://www.hindustantimes.com/technology/top-10-laptops-under-50-000-with-latest-processors-ssd-storage-and-battery-life-101752658234504.html
+2025-07-18 10:43:02,713 - WARNING - Failed to scrape meaningful content from https://www.hindustantimes.com/technology/top-10-laptops-under-50-000-with-latest-processors-ssd-storage-and-battery-life-101752658234504.html
+2025-07-18 10:43:05,421 - INFO - [4/10] Processing: https://www.prnewswire.com/news-releases/lg-brings-the-power-of-ai-to-ultra-light-laptops-with-new-lg-gram-pro-models-302506509.html
+2025-07-18 10:43:05,531 - INFO - Using PR Newswire scraper
+2025-07-18 10:43:05,542 - INFO - Success with selector: article
+2025-07-18 10:43:05,542 - INFO - Successfully scraped 5134 characters
+2025-07-18 10:43:08,096 - INFO - [5/10] Processing: https://www.prnewswire.com/news-releases/us-pricing--availability-of-2025-lg-gram-laptops-announced-302382737.html
+2025-07-18 10:43:08,165 - INFO - Using PR Newswire scraper
+2025-07-18 10:43:08,178 - INFO - Success with selector: article
+2025-07-18 10:43:08,179 - INFO - Successfully scraped 1757 characters
+2025-07-18 10:43:09,557 - INFO - [6/10] Processing: https://www.livemint.com/technology/gadgets/best-slim-laptops-for-portability-and-performance-top-10-picks-from-top-brands-11751008463607.html
+2025-07-18 10:43:09,631 - INFO - Using LiveMint scraper
+2025-07-18 10:43:09,691 - INFO - Success with selector: div[class*="content"]
+2025-07-18 10:43:09,692 - INFO - Successfully scraped 328 characters
+2025-07-18 10:43:11,627 - INFO - [7/10] Processing: https://www.livemint.com/technology/gadgets/best-laptops-under-40-000-june-2025-with-latest-processors-ssd-storage-and-windows-11-features-top-10-picks-11750755338438.html
+2025-07-18 10:43:11,704 - INFO - Using LiveMint scraper
+2025-07-18 10:43:11,764 - INFO - Success with selector: div[class*="content"]
+2025-07-18 10:43:11,765 - INFO - Successfully scraped 240 characters
+2025-07-18 10:43:13,728 - INFO - [8/10] Processing: https://timesofindia.indiatimes.com/technology/laptops-pc/11
+2025-07-18 10:43:14,883 - INFO - Using Times of India scraper
+2025-07-18 10:43:14,898 - INFO - Content extracted using fallback strategy for Times of India
+2025-07-18 10:43:14,899 - INFO - Successfully scraped 368 characters
+2025-07-18 10:43:16,951 - INFO - [9/10] Processing: https://www.hindustantimes.com/technology/top-10-handpicked-laptops-for-the-gamer-in-you-editor-s-top-recommendations-with-powerful-graphics-and-fast-processors-101748601979484.html
+2025-07-18 10:43:17,332 - ERROR - Error fetching https://www.hindustantimes.com/technology/top-10-handpicked-laptops-for-the-gamer-in-you-editor-s-top-recommendations-with-powerful-graphics-and-fast-processors-101748601979484.html: 403 Client Error: Forbidden for url: https://www.hindustantimes.com/technology/top-10-handpicked-laptops-for-the-gamer-in-you-editor-s-top-recommendations-with-powerful-graphics-and-fast-processors-101748601979484.html
+2025-07-18 10:43:17,332 - WARNING - Failed to scrape meaningful content from https://www.hindustantimes.com/technology/top-10-handpicked-laptops-for-the-gamer-in-you-editor-s-top-recommendations-with-powerful-graphics-and-fast-processors-101748601979484.html
+2025-07-18 10:43:20,087 - INFO - [10/10] Processing: https://www.livemint.com/technology/gadgets/massive-laptop-price-drops-on-amazon-prime-day-sale-2025-up-to-40-off-on-apple-hp-lenovo-and-more-11752226503352.html
+2025-07-18 10:43:20,165 - INFO - Using LiveMint scraper
+2025-07-18 10:43:20,207 - INFO - Success with selector: div[class*="content"]
+2025-07-18 10:43:20,207 - INFO - Successfully scraped 318 characters
+2025-07-18 10:43:22,161 - INFO - No new articles to save for LiveMint
+2025-07-18 10:43:22,163 - INFO - No new articles to save for PR Newswire
+2025-07-18 10:43:22,164 - INFO - No new articles to save for Times of India
+2025-07-18 10:43:22,164 - INFO - Scraping completed. Processed 10 URLs, saved 7 articles
+2025-07-18 10:44:40,041 - INFO - Reading URLs from search_results.json
+2025-07-18 10:44:40,042 - INFO - Found 30 URLs to process
+2025-07-18 10:44:40,043 - INFO - [1/30] Processing: https://www.prnewswire.com/news-releases/surgepays-launches-new-prepaid-service-phone-in-a-box-designed-for-convenience-stores-and-non-wireless-retail-channels-302492188.html
+2025-07-18 10:44:42,492 - INFO - Using PR Newswire scraper
+2025-07-18 10:44:42,515 - WARNING - Failed to scrape meaningful content from https://www.prnewswire.com/news-releases/surgepays-launches-new-prepaid-service-phone-in-a-box-designed-for-convenience-stores-and-non-wireless-retail-channels-302492188.html
+2025-07-18 10:44:45,080 - INFO - [2/30] Processing: https://www.prnewswire.com/news-releases/phone-case-market-to-grow-by-usd-13-9-billion-2024-2028-driven-by-rising-smartphone-penetration-report-on-how-ai-is-driving-market-transformation---technavio-302358951.html
+2025-07-18 10:44:45,152 - INFO - Using PR Newswire scraper
+2025-07-18 10:44:45,168 - INFO - Success with selector: article
+2025-07-18 10:44:45,169 - INFO - Successfully scraped 11219 characters
+2025-07-18 10:44:47,620 - INFO - [3/30] Processing: https://timesofindia.indiatimes.com/technology/tech-news/donald-trump-launches-smartphone-after-threatening-apple-samsung-with-tariffs-what-t1-phone-8002-phones-listing-tells-and-does-not/articleshow/121900965.cms
+2025-07-18 10:44:47,764 - INFO - Using Times of India scraper
+2025-07-18 10:44:47,768 - INFO - Success with selector: div._s30J
+2025-07-18 10:44:47,769 - INFO - Successfully scraped 2952 characters
+2025-07-18 10:44:49,573 - INFO - [4/30] Processing: https://www.hindustantimes.com/world-news/us-news/trump-mobiles-t1-phone-how-much-will-the-gold-smartphone-cost-you-and-when-will-it-be-released-pre-order-website-101750097591666.html
+2025-07-18 10:44:49,917 - INFO - Using Hindustan Times scraper
+2025-07-18 10:44:49,920 - INFO - Success with selector: div.storyDetails
+2025-07-18 10:44:49,920 - INFO - Successfully scraped 2693 characters
+2025-07-18 10:44:50,945 - INFO - [5/30] Processing: https://www.indiatoday.in/technology/news/story/google-phone-app-update-makes-calls-easier-more-fun-and-colourful-than-ever-2745930-2025-06-25
+2025-07-18 10:44:51,106 - INFO - Using India Today scraper
+2025-07-18 10:44:51,109 - INFO - Success with selector: div.description
+2025-07-18 10:44:51,110 - INFO - Successfully scraped 3234 characters
+2025-07-18 10:44:52,735 - INFO - [6/30] Processing: https://www.prnewswire.com/news-releases/the-top-season-to-break-or-lose-your-phone-is-here-as-consumers-brace-for-price-hikes-302472398.html
+2025-07-18 10:44:55,135 - INFO - Using PR Newswire scraper
+2025-07-18 10:44:55,145 - INFO - Success with selector: article
+2025-07-18 10:44:55,145 - INFO - Successfully scraped 5686 characters
+2025-07-18 10:44:58,003 - INFO - [7/30] Processing: https://www.prnewswire.com/news-releases/phound-becomes-first-phone-service-to-bring-smart-trusted-conversations-to-everyone-all-powered-by-magnum-ai-302475824.html
+2025-07-18 10:44:58,921 - INFO - Using PR Newswire scraper
+2025-07-18 10:44:58,939 - WARNING - Failed to scrape meaningful content from https://www.prnewswire.com/news-releases/phound-becomes-first-phone-service-to-bring-smart-trusted-conversations-to-everyone-all-powered-by-magnum-ai-302475824.html
+2025-07-18 10:45:01,000 - INFO - [8/30] Processing: https://timesofindia.indiatimes.com/world/us/only-allows-you-to-text-in-caps-donald-trump-launches-mobile-phones-social-media-reacts/articleshow/121897021.cms
+2025-07-18 10:45:01,093 - INFO - Using Times of India scraper
+2025-07-18 10:45:01,115 - INFO - Content extracted using fallback strategy for Times of India
+2025-07-18 10:45:01,115 - INFO - Successfully scraped 287 characters
+2025-07-18 10:45:03,166 - INFO - [9/30] Processing: https://www.livemint.com/news/us-news/classic-vaporware-trump-organization-drops-made-in-us-claim-for-t1-phone-as-analysts-point-to-china-production-11751039570203.html
+2025-07-18 10:45:03,880 - INFO - Using LiveMint scraper
+2025-07-18 10:45:03,919 - INFO - Success with selector: div[id*="article"]
+2025-07-18 10:45:03,919 - INFO - Successfully scraped 269 characters
+2025-07-18 10:45:05,994 - INFO - [10/30] Processing: https://www.prnewswire.com/news-releases/landmark-phones-in-focus-initiative-aims-to-collect-evidence-and-inform-effective-school-cell-phone-policies-302423364.html
+2025-07-18 10:45:07,160 - INFO - Using PR Newswire scraper
+2025-07-18 10:45:07,171 - INFO - Success with selector: article
+2025-07-18 10:45:07,171 - INFO - Successfully scraped 4648 characters
+2025-07-18 10:45:08,758 - INFO - [11/30] Processing: https://timesofindia.indiatimes.com/life-style/health-fitness/de-stress/how-you-hold-the-phone-can-reveal-how-intelligent-you-are/articleshow/116166190.cms
+2025-07-18 10:45:08,907 - INFO - Using Times of India scraper
+2025-07-18 10:45:08,911 - INFO - Success with selector: div._s30J
+2025-07-18 10:45:08,911 - INFO - Successfully scraped 2894 characters
+2025-07-18 10:45:10,051 - INFO - [12/30] Processing: https://economictimes.indiatimes.com/news/international/global-trends/trump-organisation-launches-trump-mobile-phone-network/articleshow/121885522.cms
+2025-07-18 10:45:10,267 - INFO - Using Economic Times scraper
+2025-07-18 10:45:10,272 - INFO - Success with selector: div.artText
+2025-07-18 10:45:10,273 - INFO - Successfully scraped 2701 characters
+2025-07-18 10:45:12,726 - INFO - [13/30] Processing: https://www.hindustantimes.com/world-news/us-news/donald-trump-mobile-copying-obamas-mobile-strategy-heres-how-the-two-phone-plans-are-different-101750095786026.html
+2025-07-18 10:45:12,764 - ERROR - Error fetching https://www.hindustantimes.com/world-news/us-news/donald-trump-mobile-copying-obamas-mobile-strategy-heres-how-the-two-phone-plans-are-different-101750095786026.html: 403 Client Error: Forbidden for url: https://www.hindustantimes.com/world-news/us-news/donald-trump-mobile-copying-obamas-mobile-strategy-heres-how-the-two-phone-plans-are-different-101750095786026.html
+2025-07-18 10:45:12,764 - WARNING - Failed to scrape meaningful content from https://www.hindustantimes.com/world-news/us-news/donald-trump-mobile-copying-obamas-mobile-strategy-heres-how-the-two-phone-plans-are-different-101750095786026.html
+2025-07-18 10:45:13,818 - INFO - [14/30] Processing: https://www.prnewswire.com/in/news-releases/huawei-brings-worlds-first-commercial-triple-foldable-phone-to-mwc-2025-302390000.html
+2025-07-18 10:45:15,279 - INFO - Using PR Newswire scraper
+2025-07-18 10:45:15,285 - INFO - Success with selector: article
+2025-07-18 10:45:15,285 - INFO - Successfully scraped 4602 characters
+2025-07-18 10:45:16,424 - INFO - [15/30] Processing: https://economictimes.indiatimes.com/news/international/global-trends/trump-mobile-as-presidents-family-announces-cell-phone-company-a-journalists-bizarre-experience-surfaces/articleshow/121887304.cms
+2025-07-18 10:45:16,788 - INFO - Using Economic Times scraper
+2025-07-18 10:45:16,806 - INFO - Content extracted using fallback strategy for Economic Times
+2025-07-18 10:45:16,806 - INFO - Successfully scraped 221 characters
+2025-07-18 10:45:18,066 - INFO - [16/30] Processing: https://timesofindia.indiatimes.com/etimes/trending/trump-mobile-phone-is-here-price-features-and-everything-you-didnt-ask-for/articleshow/121901977.cms
+2025-07-18 10:45:18,164 - INFO - Using Times of India scraper
+2025-07-18 10:45:18,168 - INFO - Success with selector: div._s30J
+2025-07-18 10:45:18,168 - INFO - Successfully scraped 2686 characters
+2025-07-18 10:45:20,373 - INFO - [17/30] Processing: https://indianexpress.com/article/technology/tech-news-technology/donald-trump-mobile-t1-phone-made-in-america-label-10087247/
+2025-07-18 10:45:22,149 - INFO - Using Indian Express scraper
+2025-07-18 10:45:22,151 - INFO - Success with selector: div.full-details
+2025-07-18 10:45:22,151 - INFO - Successfully scraped 2178 characters
+2025-07-18 10:45:23,170 - INFO - [18/30] Processing: https://indianexpress.com/section/technology/gadgets/mobile-phone/motorola/moto-x4/
+2025-07-18 10:45:24,030 - INFO - Using Indian Express scraper
+2025-07-18 10:45:24,049 - INFO - Content extracted using fallback strategy for Indian Express
+2025-07-18 10:45:24,049 - INFO - Successfully scraped 1105 characters
+2025-07-18 10:45:25,786 - INFO - [19/30] Processing: https://www.prnewswire.com/in/news-releases/nothings-phone-3a-series-to-be-powered-by-snapdragon-302377854.html
+2025-07-18 10:45:26,299 - INFO - Using PR Newswire scraper
+2025-07-18 10:45:26,304 - INFO - Content extracted using fallback strategy for PR Newswire
+2025-07-18 10:45:26,304 - INFO - Successfully scraped 217 characters
+2025-07-18 10:45:27,712 - INFO - [20/30] Processing: https://www.livemint.com/Leisure/CkpfhgFHolOGFC4HfzNQqN/10-smarter-ways-to-use-your-smart-phone.html
+2025-07-18 10:45:27,998 - INFO - Using LiveMint scraper
+2025-07-18 10:45:28,037 - INFO - Success with selector: div[id*="article"]
+2025-07-18 10:45:28,037 - INFO - Successfully scraped 448 characters
+2025-07-18 10:45:30,286 - INFO - [21/30] Processing: https://indianexpress.com/article/technology/mobile-tabs/amazon-prime-day-sale-2025-5-best-smartphone-deals-10121918/
+2025-07-18 10:45:30,438 - INFO - Using Indian Express scraper
+2025-07-18 10:45:30,441 - INFO - Success with selector: div.full-details
+2025-07-18 10:45:30,441 - INFO - Successfully scraped 7049 characters
+2025-07-18 10:45:32,439 - INFO - [22/30] Processing: https://economictimes.indiatimes.com/news/international/global-trends/us-news-trump-mobile-unbelievable-nothing-ceo-carl-pei-says-were-cooked-ahead-of-phone-3-launch/articleshow/121912398.cms
+2025-07-18 10:45:32,941 - INFO - Using Economic Times scraper
+2025-07-18 10:45:32,947 - INFO - Success with selector: div.artText
+2025-07-18 10:45:32,947 - INFO - Successfully scraped 4273 characters
+2025-07-18 10:45:35,436 - INFO - [23/30] Processing: https://indianexpress.com/article/technology/tech-reviews/nothing-phone-3-review-10123445/
+2025-07-18 10:45:36,758 - INFO - Using Indian Express scraper
+2025-07-18 10:45:36,762 - INFO - Success with selector: div.full-details
+2025-07-18 10:45:36,762 - INFO - Successfully scraped 13039 characters
+2025-07-18 10:45:39,633 - INFO - [24/30] Processing: https://www.livemint.com/topic/android-phone
+2025-07-18 10:45:39,856 - INFO - Using LiveMint scraper
+2025-07-18 10:45:39,898 - INFO - Content extracted using fallback strategy for LiveMint
+2025-07-18 10:45:39,899 - INFO - Successfully scraped 255 characters
+2025-07-18 10:45:42,782 - INFO - [25/30] Processing: https://www.prnewswire.com/news-releases/zocdoc-launches-zo-by-zocdoc-an-ai-phone-assistant-that-vanquishes-hold-times-and-maximizes-appointment-scheduling-302443593.html
+2025-07-18 10:45:45,780 - INFO - Using PR Newswire scraper
+2025-07-18 10:45:45,803 - WARNING - Failed to scrape meaningful content from https://www.prnewswire.com/news-releases/zocdoc-launches-zo-by-zocdoc-an-ai-phone-assistant-that-vanquishes-hold-times-and-maximizes-appointment-scheduling-302443593.html
+2025-07-18 10:45:47,520 - INFO - [26/30] Processing: https://indianexpress.com/article/technology/tech-reviews/vivo-x-fold-5-review-10134044/
+2025-07-18 10:45:47,679 - INFO - Using Indian Express scraper
+2025-07-18 10:45:47,682 - INFO - Success with selector: div.full-details
+2025-07-18 10:45:47,682 - INFO - Successfully scraped 7529 characters
+2025-07-18 10:45:49,344 - INFO - [27/30] Processing: https://www.prnewswire.com/news-releases/nymobile-launches-nationwide-wireless-with-personalized-phone-numbers-starting-at-5-powered-by-t-mobiles-5g-network-302417305.html
+2025-07-18 10:45:52,411 - INFO - Using PR Newswire scraper
+2025-07-18 10:45:52,430 - WARNING - Failed to scrape meaningful content from https://www.prnewswire.com/news-releases/nymobile-launches-nationwide-wireless-with-personalized-phone-numbers-starting-at-5-powered-by-t-mobiles-5g-network-302417305.html
+2025-07-18 10:45:54,762 - INFO - [28/30] Processing: https://timesofindia.indiatimes.com/technology/tech-tips/what-is-it-phone-tapping-signs-that-your-phone-is-being-tapped-and-what-to-do-about-it/articleshow/108848834.cms
+2025-07-18 10:45:54,864 - INFO - Using Times of India scraper
+2025-07-18 10:45:54,886 - INFO - Content extracted using fallback strategy for Times of India
+2025-07-18 10:45:54,887 - INFO - Successfully scraped 324 characters
+2025-07-18 10:45:56,219 - INFO - [29/30] Processing: https://economictimes.indiatimes.com/news/how-to/buying-refurbished-or-old-phone-6-crucial-factors-to-consider-before-making-your-purchase/articleshow/99531972.cms
+2025-07-18 10:45:56,381 - INFO - Using Economic Times scraper
+2025-07-18 10:45:56,386 - INFO - Success with selector: div.artText
+2025-07-18 10:45:56,386 - INFO - Successfully scraped 3347 characters
+2025-07-18 10:45:59,098 - INFO - [30/30] Processing: https://www.prnewswire.com/in/news-releases/nothing-introduces-phone-2a-302079831.html
+2025-07-18 10:45:59,189 - INFO - Using PR Newswire scraper
+2025-07-18 10:45:59,200 - INFO - Content extracted using fallback strategy for PR Newswire
+2025-07-18 10:45:59,200 - INFO - Successfully scraped 217 characters
+2025-07-18 10:46:00,329 - INFO - Saved 6 articles to scraped_news\PR_Newswire.json
+2025-07-18 10:46:00,330 - INFO - Saved 5 articles to scraped_news\Times_of_India.json
+2025-07-18 10:46:00,332 - INFO - Saved 1 articles to scraped_news\Hindustan_Times.json
+2025-07-18 10:46:00,332 - INFO - Saved 1 articles to scraped_news\India_Today.json
+2025-07-18 10:46:00,333 - INFO - Saved 3 articles to scraped_news\LiveMint.json
+2025-07-18 10:46:00,334 - INFO - Saved 4 articles to scraped_news\Economic_Times.json
+2025-07-18 10:46:00,335 - INFO - Saved 5 articles to scraped_news\Indian_Express.json
+2025-07-18 10:46:00,335 - INFO - Scraping completed. Processed 30 URLs, saved 25 articles
